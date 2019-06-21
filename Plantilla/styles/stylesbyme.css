@@ -47,6 +47,8 @@ color: inherit;
 
 .news-section {
 padding:90px 0;
+
+margin-top:10%;
 }
 
 .news-content {
@@ -203,4 +205,11 @@ section.contact div.contenedor {
       width: 100%;
       height: 50%;
     }
+    
+  }
+  @media all and(min-width:548px) and (max-width:745px){
+    section.news-section {
+      padding:0;
+      border: 1px solid red;
+      }
   }

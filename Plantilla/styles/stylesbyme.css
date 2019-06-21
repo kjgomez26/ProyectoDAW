@@ -154,7 +154,10 @@ font-weight: 600;
 .main-title-box {
 margin-bottom: 60px;
 }
-/*    CONTACT   */
+.fadeInUp h3:hover{
+color:#F2C54A;
+}
+/*    DIV QUE DICE FIND THE PERFECT   */
 
 section.contact div.contenedor {
     display: flex;

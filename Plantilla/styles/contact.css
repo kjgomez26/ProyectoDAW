@@ -1206,3 +1206,8 @@ section
 	color: #bbbbbb;
 	margin-top: 7px;
 }
+/*thai*/
+#mapid { 
+	border: 1px solid red;
+	
+	height: 180px; }

@@ -319,7 +319,7 @@ $(document).ready(function()
 			]
     	}
 
-    	// Initialize a map with options
+    	// Initialize a map with options thai -->ver
     	map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
 		// Re-center map after window resize

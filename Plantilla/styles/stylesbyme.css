@@ -192,6 +192,125 @@ section.contact div.contenedor {
   
     width: 50%;
   }
+  /* SUSCRIBIRSE */
+  /*.suscribirse .contenedor{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+    height: 90px;
+    border: 1px solid red;
+  }
+  .suscribirse .info{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }*/
+
+
+  /*  FIN SUSCRIBIRSE */
+  /*
+Bootstrap Breakpoints Mixins
+*/
+/*
+Bootstrap Variables
+*/
+/*
+Code
+*/
+.m-subscribe1 {
+  background: #f8f9fa;
+  padding-bottom: 40px;
+  padding-top: 44px;
+  width: 100%;
+}
+.m-subscribe1__title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-top: 2px;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .m-subscribe1__title {
+    font-size: 2rem;
+    text-align: left;
+  }
+}
+.m-subscribe1__form {
+  float: none;
+  margin-top: 36px;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .m-subscribe1__form {
+    float: right;
+    margin-top: 0;
+    width: auto;
+  }
+}
+.m-subscribe1__form input[type=email] {
+  border-radius: 20px;
+  display: block;
+  height: 43px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  min-width: auto;
+  position: relative;
+  top: -4px;
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .m-subscribe1__form input[type=email] {
+    display: inline-block;
+    margin-bottom: 0;
+    width: calc(100% - 160px);
+  }
+}
+@media (min-width: 992px) {
+  .m-subscribe1__form input[type=email] {
+    display: block;
+    margin-right: 16px;
+    width: auto;
+  }
+}
+@media (min-width: 992px) {
+  .m-subscribe1__form input[type=email] {
+    min-width: 290px;
+  }
+}
+@media (min-width: 1200px) {
+  .m-subscribe1__form input[type=email] {
+    min-width: 334px;
+  }
+}
+.m-subscribe1__form button[type=submit] {
+  border-radius: 20px;
+  display: block;
+  float: right;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 3.2;
+  margin-left: auto;
+  padding: 0 32px;
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .m-subscribe1__form button[type=submit] {
+    display: inline-block;
+    width: auto;
+  }
+}
+@media (min-width: 992px) {
+  .m-subscribe1__form button[type=submit] {
+    display: block;
+    float: none;
+    margin-left: 0;
+  }
+}
+
+  
   /*MEDIAS QUERY*/
 /* cambios css solo para modo vertical */
 @media all and (min-width: 320px) and (max-width: 736px) and (orientation: portrait) {

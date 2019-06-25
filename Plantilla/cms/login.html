@@ -1,76 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin Area | Account Login</title>
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
-  </head>
-  <body>
 
-    <nav class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">AdminStrap</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin-Login</title>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
+</head>
 
-        </div><!--/.nav-collapse -->
+<body>
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+          aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"></a>
       </div>
-    </nav>
+      <div id="navbar" class="collapse navbar-collapse">
 
-    <header id="header">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h1 class="text-center"> Admin Area <small>Account Login</small></h1>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <header id="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="logo_login">
+            <a class="text-center" href="../index.html"><img src="../images/logo_1.jpg" alt="Logo de pantalla login"
+                width="150" height="150"></a>
+
           </div>
+          <h4 class="place-name"> Conservatorio Niccolo Paganini</h4>
+          <h2 class="text-center"> Accede a tu cuenta </h2>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <section id="main">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 col-md-offset-4">
-            <form id="login" action="index.html" class="well">
-                  <div class="form-group">
-                    <label>Email Address</label>
-                    <input type="text" class="form-control" placeholder="Enter Email">
-                  </div>
-                  <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" class="form-control" placeholder="Password">
-                  </div>
-                  <button type="submit" class="btn btn-default btn-block">Login</button>
-              </form>
-          </div>
+  <section id="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+          <form id="login" action="index.html" class="well">
+            <div class="form-group">
+              <label>Usuario</label>
+              <input type="text" class="form-control" placeholder="Ingrese usuario">
+            </div>
+            <div class="form-group">
+              <label>Contraseña</label>
+              <input type="password" class="form-control" placeholder="Ingrese contraseña">
+              <label>
+                <input type="checkbox" checked="checked" name="recordar"> Recordarme
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-default btn-block">Ingresar</button>
+            <div class="row justify-content-center">
+              <div class="form-group">
+                <span class="text-center">¿Has olvidado tu <a id="linkPass" href="#">contraseña?</a></span>
+              </div>
+              <div class="row justify-content-center">
+                <div class="form-group">
+                  <span class="text-center">¿No tienes cuenta? Regístrate <a id="linkPass" href="#">aquí</a></span>
+                </div>
+              </div>
+          </form>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer id="footer">
-      <p>Copyright AdminStrap, &copy; 2017</p>
-    </footer>
+  <footer id="footer">
+
+    <div class=id_footer> </div>
+    <span class="media-object flag-icon flag-icon-ec">
+      
+    </span>
+     <!--<p>© Copyright &copy; 2019</p>-->
+    </div>
+  </footer>
 
   <script>
-     CKEDITOR.replace( 'editor1' );
- </script>
+    CKEDITOR.replace('editor1');
+  </script>
 
-    <!-- Bootstrap core JavaScript
+  <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
 </html>

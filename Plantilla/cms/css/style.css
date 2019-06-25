@@ -16,8 +16,11 @@ body{
 }
 
 .navbar-default {
-  background-color: #e74c3c;
-  border-color: #c0392b;
+  background-color: #4867c0;
+    background-image: linear-gradient(to right, #4867c0, #329fec);
+    background: #4867c0;
+    background: linear-gradient(to right, #4867c0, #329fec);
+  
 }
 .navbar-default .navbar-brand {
   color: #ecf0f1;
@@ -78,11 +81,18 @@ body{
 
 /* Header */
 #header{
-  background:#333333;
-  color:#ffffff;
+  background:#ffffff;
+  color:#333333;
   padding-bottom: 10px;
   margin-bottom: 15px;
 }
+/* Logo en el Login */
+.text-center {
+  padding-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
 
 #header .create{
   padding-top: 20px;
@@ -114,13 +124,52 @@ body{
 
 /* Footer */
 #footer{
-  background:#333333;
+  background:transparent;
   color:#ffffff;
   text-align:center;
   padding:30px;
   margin-top:30px;
 }
+.place-name{
+  line-height: 1.3;
+  color: #4867c0;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  
+}
+#footer{
+background-color: #4867c0;
+	background-image: linear-gradient(to right, #4867c0, #329fec);
+	background: #4867c0;
+  background: linear-gradient(to right, #4867c0, #329fec);
+  
+}
+.id_footer{
+font-size: 10px;
+  font-weight: 400;
+  line-height: 1;
+  width: auto;
+  text-align:left; 
 
+  
+}
+.flag-icon-ec {
+  background-image: url(https://sp-bootstrap.global.ssl.fastly.net/8.9.0/images/flags/ec.svg);
+}
+.flag-icon {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  font-size: 18px;
+  height: 1em;
+  width: 1.33333333em;
+}
+.media-object {
+  display: block;
+}
+  
 
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
@@ -136,4 +185,5 @@ body{
     color: #ffbbbc;
     background-color: #c0392b;
   }
+ 
 }

@@ -679,10 +679,12 @@ section
 }
 .main_nav
 {
+
 	height: 100%;
 }
 .main_nav ul
 {
+
 	height: 100%;
 }
 .main_nav ul li
@@ -714,7 +716,7 @@ section
 }
 .main_nav ul li:not(:last-child)
 {
-	margin-right: 26px;
+	margin-right: 14px;
 }
 .main_nav ul li:hover::after,
 .main_nav ul li.active::after
@@ -727,7 +729,7 @@ section
 	position: relative;
 	height: 100%;
 	line-height: 82px;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 500;
 	color: #4c4c4c;
 	padding-left: 11px;
@@ -1357,10 +1359,7 @@ section
 
 /*Para arreglar lo montado*/
 
-.test{
-	
-	position: relative;
-}
+
 
 .carousel-inner img {
       width: 100%;

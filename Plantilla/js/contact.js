@@ -320,7 +320,7 @@ $(document).ready(function()
     	}
 
     	// Initialize a map with options thai -->ver
-    	map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    	/*map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
 		// Re-center map after window resize
 		google.maps.event.addDomListener(window, 'resize', function()
@@ -330,7 +330,22 @@ $(document).ready(function()
 				google.maps.event.trigger(map, "resize");
 				map.setCenter(myLatlng);
 			}, 1400);
-		});
+		});*/
+
+		//Usando Leaflet para el mapa
+		var mymap = L.map('map').setView([-2.150994, -79.892876], 25);
+
+		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+		    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		    maxZoom: 18,
+		    id: 'mapbox.streets',
+		    accessToken: 'pk.eyJ1IjoiYWF2ZW5kYW4iLCJhIjoiY2p3NnVzdHozMjdxeDQzcXBnYjlwMTRqcyJ9.S00xReWyD9_Eb4B1h-VgIg'
+		}).addTo(mymap);
+			
+		var position = L.marker([-2.150994, -79.892876]);
+		  position.addTo(mymap)
+
+
 	}
 
 });

@@ -13,7 +13,8 @@
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
 <link rel="stylesheet" type="text/css" href="styles/about.css">
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
-<link rel="stylesheet" href="styles/stylesbyme.css"> <!--th FIXME: Estos estilos estan afectando el slider :c-->
+<link rel="stylesheet" href="styles/stylesbyme.css">
+<link href="styles/introjs.css" rel="stylesheet"> <!--LA: IntroJs para la navegacion-->
 </head>
 <body>
 <!--th inicio-->
@@ -198,17 +199,19 @@
 	
 	</div>
 	
-<div>
-	<h2>Descripcion</h2>
+<div >
+
+	<h2 data-step='1' data-intro='Aqui estamos'>Descripcion</h2>
 		<p>El Conservatorio Particular de Música “Niccolo Paganini” es una institución dedicada a la formación de músicos profesionales
 		<p>La entidad está adscrita al Ministerio de Educación, mediante un acuerdo ministerial otorgado hace ya un año. Uno de los objetivos de la pareja,  propietaria del nuevo espacio educativo de música, es forjar nuevos talentos, sobre todo en violín, “porque los conservatorios que existen han formado pianistas en su mayoría y aquí queremos darle más impulso a personas que quieran ejecutar otro instrumento”, menciona Rivas.</p>
 		<p>Agrega que el conservatorio lleva el nombre de un músico virtuoso que sirve como principal referente de los violinistas. “Quien desee llegar a ser excelente con el violín debe conocer y aprender de Paganini”, dice.</p>
 
 		<p>La institución cuenta con un auditorio con capacidad para 80 personas. Allí se realizarán certámenes, conciertos, seminarios y conferencias de música. Además, hay pequeños cuartos donde se dictarán las clases prácticas individuales, y en otros salones más grandes del conservatorio se ofrecerán las clases teóricas grupales.</p>
-    <h2>Fecha de Fundacion</h2>
+		
+    <h2 data-step='3' data-intro='test2'>Fecha de Fundacion</h2>
 		<p>Patricio Jaramillo Carrillo (Violista, Concertista y Director de Orquesta)
 		Nelly Rivas Chávez (Violinista - Concertista)</p>
-    <h2>Mision</h2>
+    <h2 data-step="2" data-intro="Test!">Mision</h2>
     	<p>Formar íntegramente profesionales en la música que se constituyan en mensajeros y multiplicadores de la expresión artístico – musical, a la vez que en paradigmas de la recuperación y promoción de la tradición musical ecuatoriana y universal</p>
 
 
@@ -312,6 +315,14 @@
 		
 </div>
 
+<script type="text/javascript" src="js/intro.js"></script>
+<!--La continuando el multipage-->
+<script type="text/javascript">
+      if (RegExp('multipage', 'gi').test(window.location.search)) {
+        introJs().start();
+      }
+    </script>
+<!--LA fin-->
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="styles/bootstrap4/popper.js"></script>
 <script src="styles/bootstrap4/bootstrap.min.js"></script>

@@ -13,7 +13,9 @@
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
-<link rel="stylesheet" href="styles/stylesbyme.css"> <!--th FIXME: Estos estilos estan afectando el slider :c-->
+<link rel="stylesheet" href="styles/stylesbyme.css">
+<link href="styles/introjs.css" rel="stylesheet">
+<link href="styles/introjs.css" rel="stylesheet"> <!--LA: IntroJs para la navegacion-->
 </head>
 <body>
 <!--th inicio-->
@@ -85,8 +87,10 @@
 											</div>
 										</a>	
 									</div>
+									
 									<div class="header_social ml-auto">
-										<ul>
+										<a id='startButton' class="btn btn-success" href="javascript:void(0);" onclick="javascript:introJs().start();">Guia</a>
+										<ul data-step='8' data-intro='Visita nuestras redes sociales'> <!--LA redes sociales-->
 											<li><a href="https://www.facebook.com/pg/conservatorioniccolopaganini/about/?ref=page_internal"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 											
 											<li><a href="https://www.instagram.com/explore/locations/1024942786/conservatorio-niccolo-paganini/"><i class="fa fa-instagram" aria-hidde="true"></i></a></li>
@@ -109,14 +113,14 @@
 										<div class="header_nav_content d-flex flex-row align-items-center justify-content-start">
 											<nav class="main_nav">
 												<ul>
-
-													<li class="active"><a href="index.html">Inicio</a></li>
-													<li><a href="about.html">Sobre nosotros</a></li>
-													<li><a href="speakers.html">Docentes</a></li>
-													<li><a href="events.html">Eventos</a></li>
-													<li><a href="news.html">Cursos</a></li>
-													<li><a href="developers.html">Equipo</a></li>
-													<li><a href="contact.html">Contáctanos</a></li>
+													<!--TODO: darles un intro-->
+													<li class="active" data-step="1" data-intro="Primer"><a href="index.html">Inicio</a></li>
+													<li data-step="2" data-intro="Aqui podras encontrar todo sobre nosotros"><a href="about.html">Sobre nosotros</a></li>
+													<li data-step="3" data-intro="Aqui encontraras los profesores del conservatorio"><a href="speakers.html">Docentes</a></li>
+													<li data-step="4" data-intro="Eventos proximos"><a href="events.html">Eventos</a></li>
+													<li data-step="5" data-intro="Conoce todo sobre nuestros programas"><a href="news.html">Cursos</a></li>
+													<li data-step="6" data-intro="Conoce nuestro equipo de Desarrollo"><a href="developers.html">Equipo</a></li>
+													<li data-step="7" data-intro="Ven y conocenos"><a href="contact.html">Contáctanos</a></li>
 													
 
 
@@ -271,7 +275,7 @@
 					   </div>
 				   </div>
 		   </section>
-		   <section class="m-subscribe1">
+		   <section class="m-subscribe1" data-step='9' data-intro='Suscribete para recibir noticias'>
 				<div class="container">
 				  <div class="row">
 					<div class="col-12 col-lg-6">
@@ -709,7 +713,16 @@
 	</footer>
 		
 </div>
-
+<!--LA multipage-->
+<script type="text/javascript">
+      document.getElementById('startButton').onclick = function() {
+        introJs().setOption('doneLabel', 'Next page').start().oncomplete(function() {
+          window.location.href = 'about.html?multipage=true';
+        });
+      };
+ </script>
+<!--LA fin-->
+<script type="text/javascript" src="js/intro.js"></script> <!--LA-->
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="styles/bootstrap4/popper.js"></script>
 <script src="styles/bootstrap4/bootstrap.min.js"></script>

@@ -186,4 +186,8 @@ $(document).ready(function()
 		menuActive = false;
 	}
 
+
+
+	//LA test D3.js
+
 });

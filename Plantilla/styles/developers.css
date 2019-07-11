@@ -61,7 +61,7 @@ ul
 p
 {
 	font-family: 'Roboto', sans-serif;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 2;
 	font-weight: 400;
 	color: #929191;
@@ -852,6 +852,7 @@ section
 	font-size: 30px;
 	font-weight: 500;
 	color: #4c4c4c;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
 }
 .speaker_subtitle
 {
@@ -859,10 +860,19 @@ section
 	font-weight: 500;
 	color: #2b88cb;
 	margin-top: -3px;
+	font-size: .9em;
+	text-transform: uppercase;
+	margin-top: .2em;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+
 }
 .speaker_text
 {
 	margin-top: 49px;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+	text-align: justify;
+
+	
 }
 .speaker_button
 {
@@ -1027,4 +1037,14 @@ section
 	font-weight: 500;
 	color: #bbbbbb;
 	margin-top: 7px;
+}
+/**** developers animaciones***************************************/
+.teamy_zoom-photo .teamy__avatar{
+  transition: transform .4s cubic-bezier(0.71, 0.05, 0.29, 0.9);
+  will-change: transform;
+  transform: scale(0.97);
+}
+
+.teamy_zoom-photo:hover .teamy__avatar{
+  transform: scale(1);
 }

@@ -188,6 +188,7 @@ $(document).ready(function()
 
 
 
-	//LA test D3.js
+	//LA test VueJs
 
+	
 });

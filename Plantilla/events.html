@@ -1,460 +1,532 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>Events</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Conference project">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="styles/events.css">
-<link rel="stylesheet" type="text/css" href="styles/events_responsive.css">
+	<title>Events</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Conference project">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+	<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+	<link rel="stylesheet" type="text/css" href="styles/events.css">
+	<link rel="stylesheet" type="text/css" href="styles/events_responsive.css">
 </head>
+
 <body>
 
-<div class="super_container">
+	<div class="super_container">
 
-	<!-- Menu -->
+		<!-- Menu -->
 
-	<div class="menu trans_500">
-		<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
-			<div class="menu_close_container"><div class="menu_close"></div></div>
-			<div class="logo menu_logo">
-				<a href="#">
-					<div class="logo_container d-flex flex-row align-items-start justify-content-start">
-						<div class="logo_image"><div><img src="images/logo_1.jpg" alt=""></div></div>
-						<div class="logo_content">
-							<div class="logo_text logo_text_not_ie">Conservatorio Niccolo Paganini</div>
-							<div class="logo_sub">Guayaquil</div>
+		<div class="menu trans_500">
+			<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
+				<div class="menu_close_container">
+					<div class="menu_close"></div>
+				</div>
+				<div class="logo menu_logo">
+					<a href="#">
+						<div class="logo_container d-flex flex-row align-items-start justify-content-start">
+							<div class="logo_image">
+								<div><img src="images/logo_1.jpg" alt=""></div>
+							</div>
+							<div class="logo_content">
+								<div class="logo_text logo_text_not_ie">Conservatorio Niccolo Paganini</div>
+								<div class="logo_sub">Guayaquil</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<ul>
+					<li class="menu_item"><a href="index.html">Home</a></li>
+					<li class="menu_item"><a href="about.html">About us</a></li>
+					<li class="menu_item"><a href="#">Speakers</a></li>
+					<li class="menu_item"><a href="#">Tickets</a></li>
+					<li class="menu_item"><a href="news.html">News</a></li>
+					<li class="menu_item"><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+			<div class="menu_social">
+				<div class="menu_social_title">Follow uf on Social Media</div>
+				<ul>
+					<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+					<li><a href="https://www.facebook.com/conservatorioniccolopaganini/"><i class="fa fa-facebook"
+								aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Home -->
+
+		<div class="home">
+			<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/events.jpg"
+				data-speed="0.8"></div>
+
+			<!-- Header -->
+
+			<header class="header" id="header">
+				<div>
+					<div class="header_top">
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<div
+										class="header_top_content d-flex flex-row align-items-center justify-content-start">
+										<div>
+											<a href="#">
+												<div
+													class="logo_container d-flex flex-row align-items-start justify-content-start">
+													<div class="logo_image">
+														<div><img src="images/logo_1.jpg" alt=""></div>
+													</div>
+													<div class="logo_content">
+														<div id="logo_text" class="logo_text logo_text_not_ie">
+															Conservatorio Niccolo Paganini</div>
+														<div class="logo_sub">Guayaquil</div>
+													</div>
+												</div>
+											</a>
+										</div>
+										<div class="header_social ml-auto">
+											<ul>
+												<li><a
+														href="https://www.facebook.com/pg/conservatorioniccolopaganini/about/?ref=page_internal"><i
+															class="fa fa-facebook" aria-hidden="true"></i></a></li>
+
+												<li><a
+														href="https://www.instagram.com/explore/locations/1024942786/conservatorio-niccolo-paganini/"><i
+															class="fa fa-instagram" aria-hidde="true"></i></a></li>
+
+												<li><a href="https://www.youtube.com/watch?v=bCxka95twgc"><i
+															class="fa fa-youtube" aria/hidde="true"> </i> </a> </li>
+															</ul> </div> <div class="hamburger ml-auto"><i
+																class="fa fa-bars" aria-hidden="true"></i>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-				</a>
-			</div>
-			<ul>
-				<li class="menu_item"><a href="index.html">Home</a></li>
-				<li class="menu_item"><a href="about.html">About us</a></li>
-				<li class="menu_item"><a href="#">Speakers</a></li>
-				<li class="menu_item"><a href="#">Tickets</a></li>
-				<li class="menu_item"><a href="news.html">News</a></li>
-				<li class="menu_item"><a href="contact.html">Contact</a></li>
-			</ul>
-		</div>
-		<div class="menu_social">
-			<div class="menu_social_title">Follow uf on Social Media</div>
-			<ul>
-				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-				<li><a href="https://www.facebook.com/conservatorioniccolopaganini/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-			</ul>
-		</div>
-	</div>
-	
-	<!-- Home -->
-
-	<div class="home">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/events.jpg" data-speed="0.8"></div>
-
-		<!-- Header -->
-
-		<header class="header" id="header">
-			<div>
-				<div class="header_top">
-					<div class="container">
-						<div class="row">
-							<div class="col">
-								<div class="header_top_content d-flex flex-row align-items-center justify-content-start">
-									<div>
-										<a href="#">
-											<div class="logo_container d-flex flex-row align-items-start justify-content-start">
-												<div class="logo_image"><div><img src="images/logo_1.jpg" alt=""></div></div>
-												<div class="logo_content">
-													<div id="logo_text" class="logo_text logo_text_not_ie">Conservatorio Niccolo Paganini</div>
-													<div class="logo_sub">Guayaquil</div>
+					<div class="header_nav" id="header_nav_pin">
+						<div class="header_nav_inner">
+							<div class="header_nav_container">
+								<div class="container">
+									<div class="row">
+										<div class="col">
+											<div
+												class="header_nav_content d-flex flex-row align-items-center justify-content-start">
+												<nav class="main_nav">
+													<ul>
+														<li><a href="index.html">Inicio</a></li>
+														<li><a href="about.html">Sobre nosotros</a></li>
+														<li><a href="speakers.html">Docentes</a></li>
+														<li class="active"><a href="#">Eventos</a></li>
+														<li><a href="news.html">Cursos</a></li>
+														<li><a href="developers.html">Equipo</a></li>
+														<li><a href="contact.html">Contáctanos</a></li>
+													</ul>
+												</nav>
+												<div class="header_extra ml-auto">
+													<div class="header_search"><i class="fa fa-search"
+															aria-hidden="true"></i></div>
+													<div class="button header_button"><a
+															href="cms/login.html">Ingresar</a></div>
 												</div>
 											</div>
-										</a>	
+										</div>
 									</div>
-									<div class="header_social ml-auto">
-										<ul>
-											<li><a href="https://www.facebook.com/pg/conservatorioniccolopaganini/about/?ref=page_internal"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-											
-											<li><a href="https://www.instagram.com/explore/locations/1024942786/conservatorio-niccolo-paganini/"><i class="fa fa-instagram" aria-hidde="true"></i></a></li>
-
-											<li><a href="https://www.youtube.com/watch?v=bCxka95twgc"><i class= "fa fa-youtube" aria/hidde="true"></i></a></li>
-										</ul>
-									</div>
-									<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
 								</div>
 							</div>
-						</div>
-					</div>
-				</div>
-				<div class="header_nav" id="header_nav_pin">
-					<div class="header_nav_inner">
-						<div class="header_nav_container">
-							<div class="container">
-								<div class="row">
-									<div class="col">
-										<div class="header_nav_content d-flex flex-row align-items-center justify-content-start">
-											<nav class="main_nav">
-												<ul>
-													<li><a href="index.html">Inicio</a></li>
-													<li><a href="about.html">Sobre nosotros</a></li>
-													<li><a href="speakers.html">Docentes</a></li>
-													<li class="active"><a href="#">Eventos</a></li>
-													<li><a href="news.html">Cursos</a></li>
-													<li><a href="developers.html">Equipo</a></li>
-													<li><a href="contact.html">Contáctanos</a></li>
-												</ul>
-											</nav>
-											<div class="header_extra ml-auto">
-												<div class="header_search"><i class="fa fa-search" aria-hidden="true"></i></div>
-												<div class="button header_button"><a href="cms/login.html">Ingresar</a></div>
+							<div class="search_container">
+								<div class="container">
+									<div class="row">
+										<div class="col">
+											<div
+												class="search_content d-flex flex-row align-items-center justify-content-end">
+												<form action="#" id="search_container_form"
+													class="search_container_form">
+													<input type="text" id="buscador" class="search_container_input"
+														placeholder="Search" required="required">
+													<button id="botonBuscar" class="search_container_button"><i
+															class="fa fa-search" aria-hidden="true"></i></button>
+												</form>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="search_container">
-							<div class="container">
-								<div class="row">
-									<div class="col">
-										<div class="search_content d-flex flex-row align-items-center justify-content-end">
-											<form action="#" id="search_container_form" class="search_container_form">
-												<input type="text" id="buscador" class="search_container_input" placeholder="Search" required="required">
-												<button id="botonBuscar" class="search_container_button"><i class="fa fa-search" aria-hidden="true"></i></button>
-											</form>
+					</div>
+				</div>
+			</header>
+
+			<div class="home_content_container">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="home_content d-flex flex-row align-items-end justify-content-start">
+								<div class="current_page">Eventos</div>
+								<div class="breadcrumbs ml-auto">
+									<ul>
+										<li><a href="index.html">Inicio</a></li>
+										<li>Eventos</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Events -->
+
+		<div class="events">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+
+						<!-- Event -->
+						<div class="event">
+							<div class="row row-lg-eq-height">
+								<div class="col-lg-6 event_col">
+									<div class="event_image_container">
+										<div class="background_image" style="background-image:url(images/event_9.png)">
+										</div>
+										<div class="date_container">
+											<a href="#">
+												<span
+													class="date_content d-flex flex-column align-items-center justify-content-center">
+													<div class="date_day">22</div>
+													<div class="date_month">Jun</div>
+												</span>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6 event_col">
+									<div class="event_content">
+										<div class="event_title">
+											<h5>Tercer Festival Internacional de Música</h5>
+										</div>
+										<div class="event_location">Auditorio del MAAC</div>
+										<div class="event_text">
+											<p>Es un evento social y cultura, el cual brinda educación a través de la
+												música clásica fomentando el intercambio de culturas entre artistas de
+												diferentes lugares de Ecuador y Latinoamérica. Los asistentes
+												disfrutarán de nuevas sensaciones y ritmos. </p>
+										</div>
+										<div class="event_speakers">
+											<!-- Event Speaker -->
+											<div
+												class="event_speaker d-flex flex-row align-items-center justify-content-start">
+												<!--<div><div class="event_speaker_image"><img src="images/event_speaker_1.jpg" alt=""></div></div>-->
+												<div class="event_speaker_content">
+													<div class="event_speaker_name">Patricio Jaramillo</div>
+													<div class="event_speaker_title">Director-Orquesta Filarmónica
+														Juvenil de Guayaquil</div>
+												</div>
+											</div>
+											<!-- Event Speaker -->
+											<div
+												class="event_speaker d-flex flex-row align-items-center justify-content-start">
+												<!--<div><div class="event_speaker_image"><img src="images/event_speaker_2.jpg" alt=""></div></div>-->
+												<div class="event_speaker_content">
+													<div class="event_speaker_name">Mateo Martínez</div>
+													<div class="event_speaker_title">Solista-Orquesta Filarmónica
+														Juvenil de Guayaquil</div>
+												</div>
+											</div>
+										</div>
+										<div class="event_buttons">
+											<div class="button event_button event_button_1"><a href="#">Reserva tus
+													entradas</a></div>
+											<div class="button_2 event_button event_button_2"><a href="#">Leer más</a>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>	
-			</div>
-		</header>
 
-		<div class="home_content_container">
+						<!-- Event -->
+						<div class="event">
+							<div class="row row-lg-eq-height">
+								<div class="col-lg-6 event_col">
+									<div class="event_image_container">
+										<div class="background_image" style="background-image:url(images/event_10.jpg)">
+										</div>
+										<div class="date_container">
+											<a href="#">
+												<span
+													class="date_content d-flex flex-column align-items-center justify-content-center">
+													<div class="date_day">23</div>
+													<div class="date_month">Jun</div>
+												</span>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6 event_col">
+									<div class="event_content">
+										<div class="event_title">
+											<h5>Masterclass en Guayaquil</h5>
+										</div>
+										<div class="event_location">Conservatorio Niccoló Paganini</div>
+										<div class="event_text">
+											<p>Este es un evento que se realiza con el fin de fortalecer y desarrollar
+												el proceso académico de los músicos guayaquileños, los 12 maestros
+												llevarán a cabo Máster Class para instrumentistas.
+											</p>
+										</div>
+										<div class="event_speakers">
+											<!-- Event Speaker -->
+											<div
+												class="event_speaker d-flex flex-row align-items-center justify-content-start">
+												<!--<div><div class="event_speaker_image"><img src="images/event_speaker_1.jpg" alt=""></div></div>-->
+												<div class="event_speaker_content">
+													<div class="event_speaker_name">Dr. Marcos Machado</div>
+													<div class="event_speaker_title">Brazil-Contrabajo</div>
+												</div>
+											</div>
+											<!-- Event Speaker -->
+											<div
+												class="event_speaker d-flex flex-row align-items-center justify-content-start">
+												<!--<div><div class="event_speaker_image"><img src="images/event_speaker_2.jpg" alt=""></div></div>-->
+												<div class="event_speaker_content">
+													<div class="event_speaker_name">Jesús Castro</div>
+													<div class="event_speaker_title">Colombia-Flauta Traversa</div>
+												</div>
+											</div>
+										</div>
+										<div class="event_buttons">
+											<div class="button event_button event_button_1"><a href="#">Reserva tus
+													entradas!</a></div>
+											<div class="button_2 event_button event_button_2"><a href="#">Leer más</a>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Event -->
+						<div class="event">
+							<div class="row row-lg-eq-height">
+								<div class="col-lg-6 event_col">
+									<div class="event_image_container">
+										<div class="background_image" style="background-image:url(images/event_11.jpg)">
+										</div>
+										<div class="date_container">
+											<a href="#">
+												<span
+													class="date_content d-flex flex-column align-items-center justify-content-center">
+													<div class="date_day">2</div>
+													<div class="date_month">Sept</div>
+												</span>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6 event_col">
+									<div class="event_content">
+										<div class="event_title">
+											<h5>Concierto de Grandes Orquestas</h5>
+										</div>
+										<div class="event_location">Teatro Sánchez Aguilar</div>
+										<div class="event_text">
+											<p>En este concierto se pondrá en el escenario el trabajo realizado a lo
+												largo del presente año lectivo con las agrupaciones del Conservatorio:
+												- Coro Infanto – Juvenil, dirigido por la Maestra Beslkis Hudson,
+												- Ensamble de Guitarras, dirigido por la Maestra Martha Acosta,
+												- Orquesta del Conservatorio, dirigida por el maestro Patricio
+												Jaramillo.
+											</p>
+
+										</div>
+										<div class="event_speakers">
+												<strong>Artistas invitados</strong>
+											<!-- Event Speaker -->
+											<div
+												class="event_speaker d-flex flex-row align-items-center justify-content-start">
+												<div>
+													
+													<!--<div class="event_speaker_image"><img
+															src="images/event_speaker_1.jpg" alt=""></div>-->
+												</div>
+												<div class="event_speaker_content">
+													<div class="event_speaker_name">Nuery Vivas</div>
+													<div class="event_speaker_title">Director invitado</div>
+												</div>
+											</div>
+											<!-- Event Speaker -->
+											<div
+												class="event_speaker d-flex flex-row align-items-center justify-content-start">
+												<div>
+													<!--<div class="event_speaker_image"><img
+															src="images/event_speaker_2.jpg" alt=""></div>-->
+												</div>
+												<div class="event_speaker_content">
+													<div class="event_speaker_name">Andrea Jaramillo</div>
+													<div class="event_speaker_title">Solista invitada en violoncello</div>
+												</div>
+											</div>
+										</div>
+										<div class="event_buttons">
+											<div class="button event_button event_button_1"><a href="#">Reserva tus entradas
+												</a></div>
+											<div class="button_2 event_button event_button_2"><a href="#">Leer más</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="pagination">
+							<ul>
+								<li class="active"><a href="#">01.</a></li>
+								<li><a href="#">02.</a></li>
+								<li><a href="#">03.</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Call to action -->
+
+		<div class="cta">
+			<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/foo.jpg"
+				data-speed="0.8"></div>
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<div class="home_content d-flex flex-row align-items-end justify-content-start">
-							<div class="current_page">Eventos</div>
-							<div class="breadcrumbs ml-auto">
+						<div class="cta_content text-center">
+							<div class="cta_title">¡Te estamos esperando!</div>
+							<!---<div class="button cta_button"><a href="#">Únete</a></div>-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+
+		<footer class="footer">
+			<div class="footer_content">
+				<div class="container">
+					<div class="row">
+
+						<!-- Footer Column -->
+						<div class="col-lg-4 footer_col">
+							<div class="footer_about">
+								<div>
+									<a href="#">
+										<div
+											class="logo_container d-flex flex-row align-items-start justify-content-start">
+											<div class="logo_image">
+												<div><img src="images/logo_1.jpg" alt=""></div>
+											</div>
+											<div class="logo_content">
+												<div id="logo_text" class="logo_text logo_text_not_ie">Conservatorio
+													Niccolo Paganini</div>
+												<div class="logo_sub">Guayaquil</div>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="footer_about_text">
+									<p>El Conservatorio Particular de Música “Niccolo Paganini” es una institución dedicada a la formación de músicos profesionales.Te preparamos para vivir la música.</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Footer Column -->
+						<div class="col-lg-3 footer_col">
+							<div class="footer_links">
 								<ul>
-									<li><a href="index.html">Inicio</a></li>
-									<li>Eventos</li>
+									<li><a href="#">About Us</a></li>
+									<li><a href="#">Services</a></li>
+									<li><a href="#">Speakers</a></li>
+									<li><a href="#">Event Dates</a></li>
+									<li><a href="#">Information</a></li>
+									<li><a href="#">Calendar</a></li>
 								</ul>
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 
-	<!-- Events -->
-
-	<div class="events">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					
-					<!-- Event -->
-					<div class="event">
-						<div class="row row-lg-eq-height">
-							<div class="col-lg-6 event_col">
-								<div class="event_image_container">
-									<div class="background_image" style="background-image:url(images/event_9.png)"></div>
-									<div class="date_container">
-										<a href="#">
-											<span class="date_content d-flex flex-column align-items-center justify-content-center">
-												<div class="date_day">22</div>
-												<div class="date_month">Jun</div>
-											</span>
-										</a>	
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 event_col">
-								<div class="event_content">
-									<div class="event_title"><h5>Tercer Festival Internacional de Música</h5></div>
-									<div class="event_location">Auditorio del MAAC</div>
-									<div class="event_text">
-										<p>Es un evento social y cultura, el cual brinda educación a través de la música clásica fomentando el intercambio de culturas entre artistas de diferentes lugares de Ecuador y Latinoamérica. Los asistentes disfrutarán de nuevas sensaciones y ritmos. </p>
-									</div>
-									<div class="event_speakers">
-										<!-- Event Speaker -->
-										<div class="event_speaker d-flex flex-row align-items-center justify-content-start">
-											<!--<div><div class="event_speaker_image"><img src="images/event_speaker_1.jpg" alt=""></div></div>-->
-											<div class="event_speaker_content">
-												<div class="event_speaker_name">Patricio Jaramillo</div>
-												<div class="event_speaker_title">Director-Orquesta Filarmónica Juvenil de Guayaquil</div>
-											</div>
-										</div>
-										<!-- Event Speaker -->
-										<div class="event_speaker d-flex flex-row align-items-center justify-content-start">
-											<!--<div><div class="event_speaker_image"><img src="images/event_speaker_2.jpg" alt=""></div></div>-->
-											<div class="event_speaker_content">
-												<div class="event_speaker_name">Mateo Martínez</div>
-												<div class="event_speaker_title">Solista-Orquesta Filarmónica Juvenil de Guayaquil</div>
-											</div>
-										</div>
-									</div>
-									<div class="event_buttons">
-										<div class="button event_button event_button_1"><a href="#">Reserva tus entradas</a></div>
-										<div class="button_2 event_button event_button_2"><a href="#">Leer más</a></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Event -->
-					<div class="event">
-						<div class="row row-lg-eq-height">
-							<div class="col-lg-6 event_col">
-								<div class="event_image_container">
-									<div class="background_image" style="background-image:url(images/event_10.jpg)"></div>
-									<div class="date_container">
-										<a href="#">
-											<span class="date_content d-flex flex-column align-items-center justify-content-center">
-												<div class="date_day">23</div>
-												<div class="date_month">Jun</div>
-											</span>
-										</a>	
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 event_col">
-								<div class="event_content">
-									<div class="event_title"><h5>Masterclass en Guayaquil</h5></div>
-									<div class="event_location">Conservatorio Niccoló Paganini</div>
-									<div class="event_text">
-										<p>Este es un evento que se realiza con el fin de fortalecer y desarrollar el proceso académico de los músicos guayaquileños, los 12 maestros llevarán a cabo Máster Class para instrumentistas.
-										</p>
-									</div>
-									<div class="event_speakers">
-										<!-- Event Speaker -->
-										<div class="event_speaker d-flex flex-row align-items-center justify-content-start">
-											<!--<div><div class="event_speaker_image"><img src="images/event_speaker_1.jpg" alt=""></div></div>-->
-											<div class="event_speaker_content">
-												<div class="event_speaker_name">Dr. Marcos Machado</div>
-												<div class="event_speaker_title">Brazil-Contrabajo</div>
-											</div>
-										</div>
-										<!-- Event Speaker -->
-										<div class="event_speaker d-flex flex-row align-items-center justify-content-start">
-											<!--<div><div class="event_speaker_image"><img src="images/event_speaker_2.jpg" alt=""></div></div>-->
-											<div class="event_speaker_content">
-												<div class="event_speaker_name">Jesús Castro</div>
-												<div class="event_speaker_title">Colombia-Flauta Traversa</div>
-											</div>
-										</div>
-									</div>
-									<div class="event_buttons">
-										<div class="button event_button event_button_1"><a href="#">Reserva tus entradas!</a></div>
-										<div class="button_2 event_button event_button_2"><a href="#">Leer más</a></div>
-									</div>
-									
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Event -->
-					<div class="event">
-						<div class="row row-lg-eq-height">
-							<div class="col-lg-6 event_col">
-								<div class="event_image_container">
-									<div class="background_image" style="background-image:url(images/event_11.jpg)"></div>
-									<div class="date_container">
-										<a href="#">
-											<span class="date_content d-flex flex-column align-items-center justify-content-center">
-												<div class="date_day">15</div>
-												<div class="date_month">May</div>
-											</span>
-										</a>	
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 event_col">
-								<div class="event_content">
-									<div class="event_title"><h5>Internet of things</h5></div>
-									<div class="event_location">@ Miami Auditorium</div>
-									<div class="event_text">
-										<p>Donec quis metus ac arcu luctus accumsan. Nunc in justo tincidunt, sodales nunc id, finibus nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce nec ante vitae lacus aliquet vulputate. Donec scelerisque accu msan molestie. Vestibulum ante ipsum primis in faucibus orci luctus.</p>
-									</div>
-									<div class="event_speakers">
-										<!-- Event Speaker -->
-										<div class="event_speaker d-flex flex-row align-items-center justify-content-start">
-											<div><div class="event_speaker_image"><img src="images/event_speaker_1.jpg" alt=""></div></div>
-											<div class="event_speaker_content">
-												<div class="event_speaker_name">Michael Smith</div>
-												<div class="event_speaker_title">Marketing Specialist</div>
-											</div>
-										</div>
-										<!-- Event Speaker -->
-										<div class="event_speaker d-flex flex-row align-items-center justify-content-start">
-											<div><div class="event_speaker_image"><img src="images/event_speaker_2.jpg" alt=""></div></div>
-											<div class="event_speaker_content">
-												<div class="event_speaker_name">Jessica Williams</div>
-												<div class="event_speaker_title">Marketing Specialist</div>
-											</div>
-										</div>
-									</div>
-									<div class="event_buttons">
-										<div class="button event_button event_button_1"><a href="#">Buy Tickets Now!</a></div>
-										<div class="button_2 event_button event_button_2"><a href="#">Read more</a></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-			<div class="row">
-				<div class="col">
-					<div class="pagination">
-						<ul>
-							<li class="active"><a href="#">01.</a></li>
-							<li><a href="#">02.</a></li>
-							<li><a href="#">03.</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Call to action -->
-
-	<div class="cta">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/foo.jpg" data-speed="0.8"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="cta_content text-center">
-						<div class="cta_title">¡Te estamos esperando!</div>
-						<!---<div class="button cta_button"><a href="#">Únete</a></div>-->
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Footer -->
-
-	<footer class="footer">
-		<div class="footer_content">
-			<div class="container">
-				<div class="row">
-					
-					<!-- Footer Column -->
-					<div class="col-lg-4 footer_col">
-						<div class="footer_about">
-							<div>
-								<a href="#">
-									<div class="logo_container d-flex flex-row align-items-start justify-content-start">
-										<div class="logo_image"><div><img src="images/logo_1.jpg" alt=""></div></div>
-										<div class="logo_content">
-											<div id="logo_text" class="logo_text logo_text_not_ie">Conservatorio Niccolo Paganini</div>
-											<div class="logo_sub">Guayaquil</div>
-										</div>
-									</div>
-								</a>	
-							</div>
-							<div class="footer_about_text">
-								<p>Donec quis metus ac arcu luctus accumsan. Nunc in justo tincidunt, sodales nunc id, finibus nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-							</div>
-						</div>
-					</div>
-
-					<!-- Footer Column -->
-					<div class="col-lg-3 footer_col">
-						<div class="footer_links">
-							<ul>
-								<li><a href="#">About Us</a></li>
-								<li><a href="#">Services</a></li>
-								<li><a href="#">Speakers</a></li>
-								<li><a href="#">Event Dates</a></li>
-								<li><a href="#">Information</a></li>
-								<li><a href="#">Calendar</a></li>
-							</ul>
-						</div>
-					</div>
-
-					<!-- Footer Column -->
-					<div class="col-lg-3 footer_col">
-						<div class="footer_links">
-							<ul>
-								<li><a href="#">Logistics</a></li>
-								<li><a href="#">Our Partners</a></li>
-								<li><a href="#">Testimonials</a></li>
-								<li><a href="#">Price Plans</a></li>
-								<li><a href="#">News</a></li>
-								<li><a href="#">Contact</a></li>
-							</ul>
-						</div>
-					</div>
-
-					<!-- Footer Column -->
-					<div class="col-lg-2 footer_col">
-						<div class="footer_links">
-							<ul>
-								<li><a href="#">About Us</a></li>
-								<li><a href="#">Services</a></li>
-								<li><a href="#">Speakers</a></li>
-								<li><a href="#">Event Dates</a></li>
-								<li><a href="#">Information</a></li>
-								<li><a href="#">Calendar</a></li>
-							</ul>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-		<div class="footer_extra">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<div class="footer_extra_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-start justify-content-center">
-							<div class="footer_social">
-								<div class="footer_social_title">Síguenos:</div>
-								<ul class="footer_social_list">
-									<li><a href="https://www.facebook.com/pg/conservatorioniccolopaganini/about/?ref=page_internal"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-											
-											<li><a href="https://www.instagram.com/explore/locations/1024942786/conservatorio-niccolo-paganini/"><i class="fa fa-instagram" aria-hidde="true"></i></a></li>
-
-											<li><a href="https://www.youtube.com/watch?v=bCxka95twgc"><i class= "fa fa-youtube" aria/hidde="true"></i></a></li>
+						<!-- Footer Column -->
+						<div class="col-lg-3 footer_col">
+							<div class="footer_links">
+								<ul>
+									<li><a href="#">Logistics</a></li>
+									<li><a href="#">Our Partners</a></li>
+									<li><a href="#">Testimonials</a></li>
+									<li><a href="#">Price Plans</a></li>
+									<li><a href="#">News</a></li>
+									<li><a href="#">Contact</a></li>
 								</ul>
 							</div>
-							
 						</div>
+
+						<!-- Footer Column -->
+						<div class="col-lg-2 footer_col">
+							<div class="footer_links">
+								<ul>
+									<li><a href="#">About Us</a></li>
+									<li><a href="#">Services</a></li>
+									<li><a href="#">Speakers</a></li>
+									<li><a href="#">Event Dates</a></li>
+									<li><a href="#">Information</a></li>
+									<li><a href="#">Calendar</a></li>
+								</ul>
+							</div>
+						</div>
+
 					</div>
 				</div>
 			</div>
-		</div>
-	</footer>
-		
-</div>
+			<div class="footer_extra">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div
+								class="footer_extra_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-start justify-content-center">
+								<div class="footer_social">
+									<div class="footer_social_title">Síguenos:</div>
+									<ul class="footer_social_list">
+										<li><a
+												href="https://www.facebook.com/pg/conservatorioniccolopaganini/about/?ref=page_internal"><i
+													class="fa fa-facebook" aria-hidden="true"></i></a></li>
 
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="styles/bootstrap4/popper.js"></script>
-<script src="styles/bootstrap4/bootstrap.min.js"></script>
-<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script src="plugins/easing/easing.js"></script>
-<script src="plugins/parallax-js-master/parallax.min.js"></script>
-<script src="js/events.js"></script>
+										<li><a
+												href="https://www.instagram.com/explore/locations/1024942786/conservatorio-niccolo-paganini/"><i
+													class="fa fa-instagram" aria-hidde="true"></i></a></li>
+
+										<li><a href="https://www.youtube.com/watch?v=bCxka95twgc"><i
+													class="fa fa-youtube" aria/hidde="true"> </i> </a> </li> </ul>
+													</div> </div> </div> </div> </div> </div> </footer> </div> <script
+													src="js/jquery-3.2.1.min.js"></script>
+													<script src="styles/bootstrap4/popper.js"></script>
+													<script src="styles/bootstrap4/bootstrap.min.js"></script>
+													<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+													<script src="plugins/easing/easing.js"></script>
+													<script src="plugins/parallax-js-master/parallax.min.js"></script>
+													<script src="js/events.js"></script>
 </body>
+
 </html>

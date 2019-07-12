@@ -26,38 +26,34 @@
 
 	<!-- Menu -->
 
-	<div class="menu trans_500">
+	<div class="menu trans_500" >
 		<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
 			<div class="menu_close_container"><div class="menu_close"></div></div>
-			<div class="logo menu_logo">
-				<a href="#">
+			<div class="logo menu_logo" id='header3'>
+				<a href="index.html">
 					<div class="logo_container d-flex flex-row align-items-start justify-content-start">
-						<div class="logo_image"><div><img src="images/logo.png" alt=""></div></div>
+						<div class="logo_image"><div><img src="images/logo_1.jpg" alt=""></div></div>
 						<div class="logo_content">
-							<div class="logo_text logo_text_not_ie">Conservatorio Niccolo Paganini</div>
-							<div class="logo_sub">Guayaquil</div>
+							<div id="logo_text" class="logo_text logo_text_not_ie">{{tituloLogo}}</div>
+							<div class="logo_sub">{{subLogo}}</div>
 						</div>
 					</div>
 				</a>
 			</div>
-			<ul>
-				<li class="menu_item"><a href="index.html">Home</a></li>
-				<li class="menu_item"><a href="#">About us</a></li>
-				<li class="menu_item"><a href="#">Speakers</a></li>
-				<li class="menu_item"><a href="#">Tickets</a></li>
-				<li class="menu_item"><a href="news.html">News</a></li>
-				<li class="menu_item"><a href="contact.html">Contact</a></li>
+			<ul id="navAbout">
+				<li class="menu_item" v-for='pagina in navBar' v-bind:class='pagina.class'>
+					<a v-bind:href="pagina.href">{{pagina.nombre}}</a>
+				</li>
 			</ul>
 		</div>
 		<div class="menu_social">
-			<div class="menu_social_title">Follow uf on Social Media</div>
+			<div class="menu_social_title">Siguenos:</div>
 			<ul>
-				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+				<li v-for='red in redSociales'>   <!--Vfor-->
+                    <a v-bind:href="red.hrefi">
+                        <i v-bind:class="red.brand" aria-hidden="true"></i>
+                    </a>
+                </li>
 			</ul>
 		</div>
 	</div>
@@ -187,96 +183,96 @@
 	
 	</div>
 	
-<div >
+	<div >
 
-	<h2 data-step='1' data-intro='Conoce nuestro conservatorio'>Descripcion</h2>
-		<p>El Conservatorio Particular de Música “Niccolo Paganini” es una institución dedicada a la formación de músicos profesionales
-		<p>La entidad está adscrita al Ministerio de Educación, mediante un acuerdo ministerial otorgado hace ya un año. Uno de los objetivos de la pareja,  propietaria del nuevo espacio educativo de música, es forjar nuevos talentos, sobre todo en violín, “porque los conservatorios que existen han formado pianistas en su mayoría y aquí queremos darle más impulso a personas que quieran ejecutar otro instrumento”, menciona Rivas.</p>
-		<p>Agrega que el conservatorio lleva el nombre de un músico virtuoso que sirve como principal referente de los violinistas. “Quien desee llegar a ser excelente con el violín debe conocer y aprender de Paganini”, dice.</p>
+		<h2 data-step='1' data-intro='Conoce nuestro conservatorio'>Descripcion</h2>
+			<p>El Conservatorio Particular de Música “Niccolo Paganini” es una institución dedicada a la formación de músicos profesionales
+			<p>La entidad está adscrita al Ministerio de Educación, mediante un acuerdo ministerial otorgado hace ya un año. Uno de los objetivos de la pareja,  propietaria del nuevo espacio educativo de música, es forjar nuevos talentos, sobre todo en violín, “porque los conservatorios que existen han formado pianistas en su mayoría y aquí queremos darle más impulso a personas que quieran ejecutar otro instrumento”, menciona Rivas.</p>
+			<p>Agrega que el conservatorio lleva el nombre de un músico virtuoso que sirve como principal referente de los violinistas. “Quien desee llegar a ser excelente con el violín debe conocer y aprender de Paganini”, dice.</p>
 
-		<p>La institución cuenta con un auditorio con capacidad para 80 personas. Allí se realizarán certámenes, conciertos, seminarios y conferencias de música. Además, hay pequeños cuartos donde se dictarán las clases prácticas individuales, y en otros salones más grandes del conservatorio se ofrecerán las clases teóricas grupales.</p>
-		
-    <h2 data-step='3' data-intro='Fecha de fundación'>Fecha de Fundacion</h2>
-		<p>Patricio Jaramillo Carrillo (Violista, Concertista y Director de Orquesta)
-		Nelly Rivas Chávez (Violinista - Concertista)</p>
-    <h2 data-step="2" data-intro="Nuestra misión">Misión</h2>
-    	<p>Formar íntegramente profesionales en la música que se constituyan en mensajeros y multiplicadores de la expresión artístico – musical, a la vez que en paradigmas de la recuperación y promoción de la tradición musical ecuatoriana y universal</p>
+			<p>La institución cuenta con un auditorio con capacidad para 80 personas. Allí se realizarán certámenes, conciertos, seminarios y conferencias de música. Además, hay pequeños cuartos donde se dictarán las clases prácticas individuales, y en otros salones más grandes del conservatorio se ofrecerán las clases teóricas grupales.</p>
+			
+	    <h2 data-step='3' data-intro='Fecha de fundación'>Fecha de Fundacion</h2>
+			<p>Patricio Jaramillo Carrillo (Violista, Concertista y Director de Orquesta)
+			Nelly Rivas Chávez (Violinista - Concertista)</p>
+	    <h2 data-step="2" data-intro="Nuestra misión">Misión</h2>
+	    	<p>Formar íntegramente profesionales en la música que se constituyan en mensajeros y multiplicadores de la expresión artístico – musical, a la vez que en paradigmas de la recuperación y promoción de la tradición musical ecuatoriana y universal</p>
 
 
-</div>	    
+	</div>	    
 
 	
 	<!-- Footer -->
 
 	<footer class="footer" id='footer'>
-		<div class="footer_content">
-			<div class="container">
-				<div class="row">
-					
-					<!-- Footer Column -->
-					<div class="col-lg-4 footer_col">
-						<div class="footer_about">
-							<div>
-								<a href="#">
-									<div class="logo_container d-flex flex-row align-items-start justify-content-start">
-										<div class="logo_image"><div><img src="images/logo_1.jpg" alt=""></div></div>
-										<div class="logo_content">
-											<div id="logo_text" class="logo_text logo_text_not_ie">{{tituloLogo}}</div>
-											<div class="logo_sub">{{subLogo}}}</div>
-										</div>
-									</div>
-								</a>	
-							</div>
-							<div class="footer_about_text">
-								<p>{{descripcion}}</p>
-							</div>
-						</div>
-					</div>
+        <div class="footer_content">
+            <div class="container">
+                <div class="row">
+                    
+                    <!-- Footer Column -->
+                    <div class="col-lg-4 footer_col">
+                        <div class="footer_about">
+                            <div>
+                                <a href="#">
+                                    <div class="logo_container d-flex flex-row align-items-start justify-content-start">
+                                        <div class="logo_image"><div><img src="images/logo_1.jpg" alt=""></div></div>
+                                        <div class="logo_content">
+                                            <div id="logo_text" class="logo_text logo_text_not_ie">{{tituloLogo}}</div>
+                                            <div class="logo_sub">{{subLogo}}}</div>
+                                        </div>
+                                    </div>
+                                </a>    
+                            </div>
+                            <div class="footer_about_text">
+                                <p>{{descripcion}}</p>
+                            </div>
+                        </div>
+                    </div>
 
-					<!-- Footer Column -->
-					<div class="col-lg-3 footer_col">
-						<div class="footer_links">
-							<ul>
-								<li v-for='pagina in navBar' v-bind:class='pagina.class'>
-														<a v-bind:href="pagina.href">{{pagina.nombre}}</a>
-													</li>
-							</ul>
-						</div>
-					</div>
+                    <!-- Footer Column -->
+                    <div class="col-lg-3 footer_col">
+                        <div class="footer_links">
+                            <ul>
+                                <li v-for='pagina in navBar' v-bind:class='pagina.class'>
+                                                        <a v-bind:href="pagina.href">{{pagina.nombre}}</a>
+                                                    </li>
+                            </ul>
+                        </div>
+                    </div>
 
-					<div class="col-lg-3 footer_col">
-						<div class="footer_social">
-								<div class="footer_social_title">Síguenos:</div>
+                    <div class="col-lg-3 footer_col">
+                        <div class="footer_social">
+                                <div class="footer_social_title">Síguenos:</div>
 
-								<ul class="footer_social_list">
-									<li v-for='red in redSociales'>   <!--Vfor-->
-												<a v-bind:href="red.hrefi">
-													<i v-bind:class="red.brand" aria-hidden="true"></i>
-												</a>
-									</li>
-								</ul>
-						</div>
-						<div class="copyright">
-									<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-									Copyright &copy;
-									<script>document.write(new Date().getFullYear());</script> All rights reserved |
-									Conservatorio Niccolo Paganini  <!-- <i class="fa fa-heart-o" aria-hidden="true"></i> by
-									<a href="https://colorlib.com" target="_blank">Colorlib</a>-->
-									<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-								</div>
-					</div>
+                                <ul class="footer_social_list">
+                                    <li v-for='red in redSociales'>   <!--Vfor-->
+                                                <a v-bind:href="red.hrefi">
+                                                    <i v-bind:class="red.brand" aria-hidden="true"></i>
+                                                </a>
+                                    </li>
+                                </ul>
+                        </div>
+                        <div class="copyright">
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;
+                                    <script>document.write(new Date().getFullYear());</script> All rights reserved |
+                                    Conservatorio Niccolo Paganini  <!-- <i class="fa fa-heart-o" aria-hidden="true"></i> by
+                                    <a href="https://colorlib.com" target="_blank">Colorlib</a>-->
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                </div>
+                    </div>
 
-					
+                    
 
-				</div>
-			</div>
+                </div>
+            </div>
 
-			
-			
-			
-		</div>
-		
-	</footer>
+            
+            
+            
+        </div>
+        
+    </footer>
 
 </div>
 <!--d3.js-->

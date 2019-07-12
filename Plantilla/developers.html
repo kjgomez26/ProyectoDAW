@@ -23,46 +23,37 @@
 
         <!-- Menu -->
 
-        <div class="menu trans_500">
-            <div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
-                <div class="menu_close_container">
-                    <div class="menu_close"></div>
-                </div>
-                <div class="logo menu_logo">
-                    <a href="#">
-                        <div class="logo_container d-flex flex-row align-items-start justify-content-start">
-                            <div class="logo_image">
-                                <div><img src="images/logo_1.jpg" alt=""></div>
-                            </div>
-                            <div class="logo_content">
-                                <div class="logo_text logo_text_not_ie">Conservatorio Niccolo Paganini</div>
-                                <div class="logo_sub">Colegio de artes</div>
-                            </div>
+        <div class="menu trans_500" >
+        <div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
+            <div class="menu_close_container"><div class="menu_close"></div></div>
+            <div class="logo menu_logo" id='header3'>
+                <a href="index.html">
+                    <div class="logo_container d-flex flex-row align-items-start justify-content-start">
+                        <div class="logo_image"><div><img src="images/logo_1.jpg" alt=""></div></div>
+                        <div class="logo_content">
+                            <div id="logo_text" class="logo_text logo_text_not_ie">{{tituloLogo}}</div>
+                            <div class="logo_sub">{{subLogo}}</div>
                         </div>
-                    </a>
-                </div>
-                <ul>
-                    <li class="menu_item"><a href="index.html">Home</a></li>
-                    <li class="menu_item"><a href="#">About us</a></li>
-                    <li class="menu_item"><a href="#">Equipo</a></li>
-                    <li class="menu_item"><a href="#">Tickets</a></li>
-                    <li class="menu_item"><a href="news.html">News</a></li>
-                    <li class="menu_item"><a href="contact.html">Contact</a></li>
-                </ul>
+                    </div>
+                </a>
             </div>
-            <div class="menu_social">
-                <div class="menu_social_title">Follow uf on Social Media</div>
-                <ul>
-                    <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                    <li><a href="https://www.facebook.com/conservatorioniccolopaganini/"><i class="fa fa-facebook"
-                                aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                </ul>
-            </div>
+            <ul id="navDevelopers">
+                <li class="menu_item" v-for='pagina in navBar' v-bind:class='pagina.class'>
+                    <a v-bind:href="pagina.href">{{pagina.nombre}}</a>
+                </li>
+            </ul>
         </div>
+        <div class="menu_social">
+            <div class="menu_social_title">Siguenos:</div>
+            <ul>
+                <li v-for='red in redSociales'>   <!--Vfor-->
+                    <a v-bind:href="red.hrefi">
+                        <i v-bind:class="red.brand" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
         <!-- Home -->
 
@@ -256,7 +247,7 @@
     </footer>
 
     </div>
-    
+
 <!--VueJs Inicio-->
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>

@@ -50,6 +50,24 @@ var headermain= new Vue({
 		}
 });
 
+
+var header3= new Vue({
+		el: '#header3',
+
+		data:{
+			tituloLogo: 'Conservatorio Niccolo Paganini',
+			subLogo:'Guayaquil',
+
+			redSociales: [{"hrefi": "https://www.facebook.com/pg/conservatorioniccolopaganini/about/?ref=page_internal", "brand": "fa fa-facebook"},
+			{"hrefi": "https://www.instagram.com/explore/locations/1024942786/conservatorio-niccolo-paganini/", "brand": "fa fa-instagram"},
+			{"hrefi": "https://www.youtube.com/watch?v=bCxka95twgc", "brand":"fa fa-youtube"}],
+
+			
+
+
+		}
+});
+
 var footer=new Vue({
 		el: '#footer',
 

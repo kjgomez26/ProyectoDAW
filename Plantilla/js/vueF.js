@@ -107,9 +107,42 @@ var about= new Vue({
 
 });
 
+var about= new Vue({
+	el:'#navAbout2',
+
+	data: {
+		navBar:[{"href":"index.html","nombre":"Inicio","class":""},{"href":"about.html","nombre":"Sobre Nosotros","class":"active"},
+		{"href":"speakers.html","nombre":"Docentes","class":""},{"href":"events.html","nombre":"Eventos","class":""},
+		{"href":"news.html","nombre":"Cursos","class":""},{"href":"developers.html","nombre":"Equipo","class":""},
+		{"href":"contact.html","nombre":"Contáctanos","class":""}]
+
+	}
+		
+
+
+
+
+});
 
 var index= new Vue({
 	el:'#navIndex',
+
+	data: {
+		navBar:[{"href":"index.html","nombre":"Inicio","class":"active","datastep":"1","dataintro":"Muestra la pagina princial"},{"href":"about.html","nombre":"Sobre Nosotros","class":"","datastep":"2","dataintro":"Aqui podras encontrar todo sobre nosotros"},
+		{"href":"speakers.html","nombre":"Docentes","class":"","datastep":"3","dataintro":"Aqui encontraras los profesores del conservatorio"},{"href":"events.html","nombre":"Eventos","class":"","datastep":"4","dataintro":"Detalles sobre los proximos eventos"},
+		{"href":"news.html","nombre":"Cursos","class":"","datastep":"5","dataintro":"Conoce todo sobre nuestros programas"},{"href":"developers.html","nombre":"Equipo","class":"","datastep":"6","dataintro":"Conoce nuestro equipo de Desarrollo"},
+		{"href":"contact.html","nombre":"Contáctanos","class":"","datastep":"7","dataintro":"Deja tu mensaje y te lo responderemos"}]
+
+	}
+		
+
+
+
+
+});
+
+var index= new Vue({
+	el:'#navIndex2',
 
 	data: {
 		navBar:[{"href":"index.html","nombre":"Inicio","class":"active","datastep":"1","dataintro":"Muestra la pagina princial"},{"href":"about.html","nombre":"Sobre Nosotros","class":"","datastep":"2","dataintro":"Aqui podras encontrar todo sobre nosotros"},
@@ -141,9 +174,41 @@ var speakers= new Vue({
 
 
 });
+var speakers= new Vue({
+	el:'#navSpeakers2',
+
+	data: {
+		navBar:[{"href":"index.html","nombre":"Inicio","class":""},{"href":"about.html","nombre":"Sobre Nosotros","class":""},
+		{"href":"speakers.html","nombre":"Docentes","class":"active"},{"href":"events.html","nombre":"Eventos","class":""},
+		{"href":"news.html","nombre":"Cursos","class":""},{"href":"developers.html","nombre":"Equipo","class":""},
+		{"href":"contact.html","nombre":"Contáctanos","class":""}]
+
+	}
+		
+
+
+
+
+});
 
 var news= new Vue({
 	el:'#navNews',
+
+	data: {
+		navBar:[{"href":"index.html","nombre":"Inicio","class":""},{"href":"about.html","nombre":"Sobre Nosotros","class":""},
+		{"href":"speakers.html","nombre":"Docentes","class":""},{"href":"events.html","nombre":"Eventos","class":""},
+		{"href":"news.html","nombre":"Cursos","class":"active"},{"href":"developers.html","nombre":"Equipo","class":""},
+		{"href":"contact.html","nombre":"Contáctanos","class":""}]
+
+	}
+		
+
+
+
+
+});
+var news= new Vue({
+	el:'#navNews2',
 
 	data: {
 		navBar:[{"href":"index.html","nombre":"Inicio","class":""},{"href":"about.html","nombre":"Sobre Nosotros","class":""},
@@ -175,6 +240,22 @@ var about= new Vue({
 
 
 });
+var about= new Vue({
+	el:'#navEvents2',
+
+	data: {
+		navBar:[{"href":"index.html","nombre":"Inicio","class":""},{"href":"about.html","nombre":"Sobre Nosotros","class":""},
+		{"href":"speakers.html","nombre":"Docentes","class":""},{"href":"events.html","nombre":"Eventos","class":"active"},
+		{"href":"news.html","nombre":"Cursos","class":""},{"href":"developers.html","nombre":"Equipo","class":""},
+		{"href":"contact.html","nombre":"Contáctanos","class":""}]
+
+	}
+		
+
+
+
+
+});
 
 var developers= new Vue({
 	el:'#navDevelopers',
@@ -192,9 +273,41 @@ var developers= new Vue({
 
 
 });
+var developers= new Vue({
+	el:'#navDevelopers2',
+
+	data: {
+		navBar:[{"href":"index.html","nombre":"Inicio","class":""},{"href":"about.html","nombre":"Sobre Nosotros","class":""},
+		{"href":"speakers.html","nombre":"Docentes","class":""},{"href":"events.html","nombre":"Eventos","class":""},
+		{"href":"news.html","nombre":"Cursos","class":""},{"href":"developers.html","nombre":"Equipo","class":"active"},
+		{"href":"contact.html","nombre":"Contáctanos","class":""}]
+
+	}
+		
+
+
+
+
+});
 
 var developers= new Vue({
 	el:'#navContact',
+
+	data: {
+		navBar:[{"href":"index.html","nombre":"Inicio","class":""},{"href":"about.html","nombre":"Sobre Nosotros","class":""},
+		{"href":"speakers.html","nombre":"Docentes","class":""},{"href":"events.html","nombre":"Eventos","class":""},
+		{"href":"news.html","nombre":"Cursos","class":""},{"href":"developers.html","nombre":"Equipo","class":""},
+		{"href":"contact.html","nombre":"Contáctanos","class":"active"}]
+
+	}
+		
+
+
+
+
+});
+var developers= new Vue({
+	el:'#navContact2',
 
 	data: {
 		navBar:[{"href":"index.html","nombre":"Inicio","class":""},{"href":"about.html","nombre":"Sobre Nosotros","class":""},

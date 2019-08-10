@@ -1,0 +1,5 @@
+Admin: luiggisao
+Password: AkatsUki123
+
+
+run: node ../node_modules/express-admin/app.js .

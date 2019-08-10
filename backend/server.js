@@ -8,7 +8,7 @@ const port=3000;
 //app.use(bodyParser.json());
 
 //app.get('/', (req,res) => res.send('test'));
-app.get('/messages', (req,res) => {
+app.get('/', (req,res) => {
     const messages = ["Holi","Estoy","funcionando"];
     res.send(messages);
 });

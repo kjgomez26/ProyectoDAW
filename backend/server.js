@@ -1,21 +1,41 @@
 const express = require('express');
-const app= express();
-const port=3000;
-//const cors = require('cors');
-//const bodyParser = require('body-parser');
-
-//app.use(cors());
-//app.use(bodyParser.json());
-
-//app.get('/', (req,res) => res.send('test'));
-app.get('/', (req,res) => {
-    const messages = ["Holi","Estoy","funcionando"];
-    res.send(messages);
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const morgan = require('morgan');
+ 
+const messages = require('./database/messages');
+ 
+const app = express();
+ 
+app.use(morgan('tiny'));
+app.use(cors());
+app.use(bodyParser.json());
+ 
+app.get('/', (req, res) => {
+    res.json({
+        message: 'Behold The MEVN Stack!'
+    });
+});
+ 
+app.get('/messages', (req, res) => {
+    messages.getAll().then((messages) => {
+        res.json(messages);
+    });
 });
 
-/*app.post('/', (req, res) => {
+app.post('/messages', (req, res) => {
     console.log(req.body);
-    res.json({});
-});*/ //post enviando
-    //res.send('test'));
-app.listen(port,() => console.log('app running'));
+    messages.create(req.body).then((message) => {
+        res.json(message);
+    }).catch((error) => {
+        res.status(500);
+        res.json(error);
+    });
+});
+
+
+ 
+const port = process.env.PORT || 4000;
+app.listen(port, () => {
+    console.log(`listening on ${port}`);
+});

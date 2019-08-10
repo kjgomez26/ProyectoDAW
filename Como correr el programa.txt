@@ -1,0 +1,8 @@
+Como correr el programa:
+
+Antes que nada hay que correr nuestra base de datos en Mongodb con el comando 			mongod
+1. en el directorio de backend/ abrir un CMD y correr el comando 						node server.js
+2. en el directorio frontend/client/ abrir un CMD y correr el comando 					npm run serve
+3. En el direction backend/admin/ correr el comando 									node ../node_modules/express-admin/app.js .
+4. Las credenciales por ahora son: 			Admin: luiggisao
+											Password: AkatsUki123

@@ -9,6 +9,8 @@ buscar.onclick = function searchfun() {
       (this).style.visibility = 'hidden';
     }
   })
+
+  return false;
 };
 
 function setVisible(object) {

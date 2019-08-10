@@ -347,7 +347,7 @@ var vm = new Vue({
 										<div class="search_content d-flex flex-row align-items-center justify-content-end">
 											<form action="#" id="search_container_form" class="search_container_form">
 												<input type="text" class="search_container_input" placeholder="Search" required="required">
-												<button class="search_container_button"><i class="fa fa-search" aria-hidden="true"></i></button>
+												<button class="search_container_button" id="botonBuscar"><i class="fa fa-search" aria-hidden="true"></i></button>
 											</form>
 										</div>
 									</div>

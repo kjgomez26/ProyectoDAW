@@ -128,10 +128,10 @@ var index= new Vue({
 	el:'#navIndex',
 
 	data: {
-		navBar:[{"href":"index.html","nombre":"Inicio","class":"active","datastep":"1","dataintro":"Muestra la pagina princial"},{"href":"about.html","nombre":"Sobre Nosotros","class":"","datastep":"2","dataintro":"Aqui podras encontrar todo sobre nosotros"},
-		{"href":"speakers.html","nombre":"Docentes","class":"","datastep":"3","dataintro":"Aqui encontraras los profesores del conservatorio"},{"href":"events.html","nombre":"Eventos","class":"","datastep":"4","dataintro":"Detalles sobre los proximos eventos"},
-		{"href":"news.html","nombre":"Cursos","class":"","datastep":"5","dataintro":"Conoce todo sobre nuestros programas"},{"href":"developers.html","nombre":"Equipo","class":"","datastep":"6","dataintro":"Conoce nuestro equipo de Desarrollo"},
-		{"href":"contact.html","nombre":"Contáctanos","class":"","datastep":"7","dataintro":"Deja tu mensaje y te lo responderemos"}]
+		navBar:[{"href":"/","nombre":"Inicio","class":"active","datastep":"1","dataintro":"Muestra la pagina princial"},{"href":"/about","nombre":"Sobre Nosotros","class":"","datastep":"2","dataintro":"Aqui podras encontrar todo sobre nosotros"},
+		{"href":"/speakers","nombre":"Docentes","class":"","datastep":"3","dataintro":"Aqui encontraras los profesores del conservatorio"},{"href":"/events","nombre":"Eventos","class":"","datastep":"4","dataintro":"Detalles sobre los proximos eventos"},
+		{"href":"/news","nombre":"Cursos","class":"","datastep":"5","dataintro":"Conoce todo sobre nuestros programas"},{"href":"/developers","nombre":"Equipo","class":"","datastep":"6","dataintro":"Conoce nuestro equipo de Desarrollo"},
+		{"href":"/contact","nombre":"Contáctanos","class":"","datastep":"7","dataintro":"Deja tu mensaje y te lo responderemos"}]
 
 	}
 		

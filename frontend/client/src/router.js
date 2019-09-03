@@ -1,7 +1,12 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
-import HomeComponent from './components/HomeComponent.vue';
+import AboutComponent from './components/AboutComponent.vue';
+import Speakers from './components/SpeakersComponent.vue';
+import Events from './components/EventsComponent.vue';
+import News from './components/NewsComponent.vue';
+import Developers from './components/DevelopersComponent.vue';
+import Contact from './components/ContactComponent.vue';
 
 Vue.use(Router);
 
@@ -15,19 +20,34 @@ export default new Router({
       component: Home,
     },
     {
-      path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component() {
-        return import(/* webpackChunkName: "about" */ './views/About.vue');
-      },
+      path: '/about',
+      component: AboutComponent,
     },
     {
-      name: 'home',
-      path: '/homec',
-      component: HomeComponent,
+      path: '/speakers',
+      name: 'speakers',
+      component: Speakers,
+    },
+    {
+      path: '/events',
+      name: 'Events',
+      component: Events,
+    },
+    {
+      path: '/news',
+      name: 'News',
+      component: News,
+    },
+    {
+      path: '/developers',
+      name: 'devleopers',
+      component: Developers,
+    },
+    {
+      path: '/contact',
+      name: 'Contact',
+      component: Contact,
     },
   ],
 });

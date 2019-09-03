@@ -100,6 +100,8 @@ INSERT INTO profesor(idProfesor, nombre, nacionalidad)
 	VALUES(9,'Miguel Andres Luna', 'argentino');
 INSERT INTO profesor(idProfesor, nombre, nacionalidad)
 	VALUES(10,'Steven Ford', 'estadounidense');
+INSERT INTO profesor(idProfesor, nombre, nacionalidad)
+	VALUES(11,'Luciano Venturi', 'italiano');
 INSERT INTO curso(idCurso,tipo,categoriaInstrumento,cantEstudiantes,descripcion)
 	VALUES(1,'libre','viento',25,'Abierto para grupos interesados en la música.');
 INSERT INTO curso(idCurso,tipo,categoriaInstrumento,cantEstudiantes,descripcion)

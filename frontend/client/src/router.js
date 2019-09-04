@@ -8,6 +8,7 @@ import News from './components/NewsComponent.vue';
 import Developers from './components/DevelopersComponent.vue';
 import Contact from './components/ContactComponent.vue';
 
+
 Vue.use(Router);
 
 export default new Router({

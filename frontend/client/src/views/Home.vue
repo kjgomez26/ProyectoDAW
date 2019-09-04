@@ -1,6 +1,6 @@
 <template>
 <div>
-	<div class="home">
+	<div>
 		<div class="carousel slide" data-ride="carousel" id="carouselExampleIndicators">
 			<ol class="carousel-indicators">
 			<li class="active" data-slide-to="0" data-target="#carouselExampleIndicators"></li>

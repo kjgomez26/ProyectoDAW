@@ -13,9 +13,22 @@
     <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>plugins/OwlCarousel2-2.2.1/animate.css">
     <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>styles/main_styles.css">
     <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>styles/about.css">
+    <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>styles/developers.css"s>
+    <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>styles/speakers.css">
+    <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>styles/contact.css">
+    <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>styles/contact_responsive.css">
+    <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>styles/speakers_responsive.css">
     <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>styles/responsive.css">
+    <link rel="stylesheet" type="text/css" href="styles/events.css">
+      <link rel="stylesheet" type="text/css" href="styles/news.css">
+  <link rel="stylesheet" type="text/css" href="styles/news_responsive.css">
+  <link rel="stylesheet" type="text/css" href="styles/events_responsive.css">
     <link rel="stylesheet" href="<%= BASE_URL %>styles/stylesbyme.css">
     <link href="<%= BASE_URL %>styles/introjs.css" rel="stylesheet"> <!--LA: IntroJs para la navegacion-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/> <!--LA map-->
+</head>
   </head>
 <body>
   <div class="super_container">
@@ -50,7 +63,10 @@
         </ul>
       </div>
     </div>
-    <div class="home">
+    <div class="homeMain">
+            <!--div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/speakers.jpg"
+                data-speed="0.8"></div-->
+
     <!-- Header -->
 
         <header class="header" id='header'>
@@ -117,6 +133,23 @@
             </div>  
           </div>
         </header>
+        <!--div class="home_content_container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="home_content d-flex flex-row align-items-end justify-content-start">
+                                <div class="current_page">Desarrolladores</div>
+                                <div class="breadcrumbs ml-auto">
+                                    <ul>
+                                        <li><a href="index.html">Inicio</a></li>
+                                        <li>Equipo</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div-->
     </div>
   <div id="app"></div>
     <!-- built files will be auto injected -->
@@ -193,6 +226,10 @@
     </footer>
 </div>
 </div>
+<!--LA tryhardeando el map-->
+ <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   crossorigin=""></script>
     <script type="text/javascript">
           document.getElementById('startButton').onclick = function() {
             introJs().setOption('doneLabel', 'Next page').start().oncomplete(function() {
@@ -215,5 +252,10 @@
     <script src="<%= BASE_URL %>plugins/easing/easing.js"></script>
     <script src="<%= BASE_URL %>plugins/parallax-js-master/parallax.min.js"></script>
     <script src="<%= BASE_URL %>js/custom.js"></script>
+    <script src="<%= BASE_URL %>js/developer.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
+    <script src="<%= BASE_URL %>js/contact.js"></script>
+    <script src="js/speakers.js"></script>
+    <script src="<%= BASE_URL %>js/news.js"></script>
   </body>
 </html>

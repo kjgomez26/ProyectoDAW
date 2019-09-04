@@ -1,20 +1,70 @@
 <template>
-  <div>
-    <div class='container'>
-      <div class='row'>
-        <div class='col-lg-12 text-left'>
-          <h3 class='subtitle' data-step='1' data-intro='Conoce nuestro conservatorio'>Descripcion</h3>
-            <p>El Conservatorio Particular de Música “Niccolo Paganini” es una institución dedicada a la formación de músicos profesionales
-            <p>La entidad está adscrita al Ministerio de Educación, mediante un acuerdo ministerial otorgado hace ya un año. Uno de los objetivos de la pareja,  propietaria del nuevo espacio educativo de música, es forjar nuevos talentos, sobre todo en violín, “porque los conservatorios que existen han formado pianistas en su mayoría y aquí queremos darle más impulso a personas que quieran ejecutar otro instrumento”, menciona Rivas.</p>
-            <p>Agrega que el conservatorio lleva el nombre de un músico virtuoso que sirve como principal referente de los violinistas. “Quien desee llegar a ser excelente con el violín debe conocer y aprender de Paganini”, dice.</p>
-            <p>La institución cuenta con un auditorio con capacidad para 80 personas. Allí se realizarán certámenes, conciertos, seminarios y conferencias de música. Además, hay pequeños cuartos donde se dictarán las clases prácticas individuales, y en otros salones más grandes del conservatorio se ofrecerán las clases teóricas grupales.</p>
-            <h3 class='subtitle' data-step='3' data-intro='Fecha de fundación'>Fecha de Fundacion</h3>
-            <p>Patricio Jaramillo Carrillo (Violista, Concertista y Director de Orquesta)
-            Nelly Rivas Chávez (Violinista - Concertista)</p>
-            <h3 class='subtitle' data-step="2" data-intro="Nuestra misión">Misión</h3>
-              <p>Formar íntegramente profesionales en la música que se constituyan en mensajeros y multiplicadores de la expresión artístico – musical, a la vez que en paradigmas de la recuperación y promoción de la tradición musical ecuatoriana y universal</p>
+  <div class="mainC">
+      <div class="container mt-5 mb-5"> <!-- añadi margins-->
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="contact_form_container">
+          <div class="contact_form_title">Contáctanos</div>
+          <form action="#" class="contact_form" id="contact_form">
+              <label for="exampleFormControlSelect1">Nombre</label><!--TODO: ver for-->
+            <input type="text" class="contact_input" placeholder="John Doe" required="required">
+            <label for="exampleFormControlSelect1">Email</label>
+            <input type="email" class="contact_input" placeholder="johndoe@mail.com" required="required">
+            <div class="form-group"> <!--th-->
+                <label for="exampleFormControlSelect1">Ciudad</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>Guayaquil</option>
+                  <option>Quito</option>
+                  <option>Cuenca</option>
+                  <option>Loja</option>
+                  <option>Otro</option>
+                </select>
+                </div>
+                <label for="exampleFormControlSelect1">Subject</label>
+            <input type="text" class="contact_input" placeholder="Asunto" required="required">
+            <label for="exampleFormControlSelect1">Mensaje</label>
+            <textarea name="contact_textarea" id="contact_textarea" class="contact_textarea contact_input" placeholder="Comment..." required="required"></textarea>
+            <button class="button contact_button"><span>Send Message</span></button>
+          </form>
         </div>
+      </div>
+      <div class="col-lg-5 offset-lg-1">
+        <!--FIXME: arreglar margin-->
+        <img src="https://images.unsplash.com/photo-1559553211-523e51d8fb08?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="saxo">
+
       </div>
     </div>
   </div>
+
+  <!--th fin-->
+
+  <div class="contact">
+    <div class="contact_map_background">
+
+      <!-- Contact Map -->
+      <div class="contact_map">
+
+        <!-- Google Map -->
+        <div class="map">
+          <div id="google_map" class="google_map">
+            <div class="map_container">
+              <div id="map"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  </div>
 </template>
+
+<style>
+.mainC
+{
+  width: 100%;
+  height: 100%;
+  margin-top:200px;
+}
+</style>

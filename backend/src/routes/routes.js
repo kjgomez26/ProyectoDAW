@@ -1,6 +1,28 @@
 // Load the MySQL pool connection
 const pool = require('../data/config');
 
+var Evento = require("../models/eventos.js");
+const EventosController= require('../controllers/EventosController.js');
+const router = app => {
+
+    app.get('/eventos', autores.getAutores)
+
+
+    app.get('/eventos/:id', autores.getSingleAutor)
+
+    app.post('/eventos', autores.addAutor)
+
+
+    app.put('/eventos/:id', autores.updateAutor)
+
+    app.delete('/eventos/:id',autores.deleteAutor)
+
+    
+    
+   
+}
+
+module.exports = router;
 
 const router = app => {
     // Display welcome message on the root

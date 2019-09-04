@@ -6,5 +6,5 @@ var PostSchema = new Schema({
   description: String
 });
 
-var Post = mongoose.model("Post", PostSchema);
+var Post = mongoose.model("eventos", PostSchema);
 module.exports = Post;

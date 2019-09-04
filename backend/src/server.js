@@ -6,7 +6,7 @@ const app = express();
 
 //Base de dato no relacional
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/posts');
+mongoose.connect('mongodb://localhost:27017/db_final');
 var db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error"));
 db.once("open", function(callback){

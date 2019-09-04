@@ -4,10 +4,9 @@ import Home from './views/Home.vue';
 import AboutComponent from './components/AboutComponent.vue';
 import Speakers from './components/SpeakersComponent.vue';
 import Events from './components/EventsComponent.vue';
-import News from './components/NewsComponent.vue';
 import Developers from './components/DevelopersComponent.vue';
 import Contact from './components/ContactComponent.vue';
-
+import News from './components/NewsComponent.vue';
 
 Vue.use(Router);
 
@@ -36,11 +35,6 @@ export default new Router({
       component: Events,
     },
     {
-      path: '/news',
-      name: 'News',
-      component: News,
-    },
-    {
       path: '/developers',
       name: 'devleopers',
       component: Developers,
@@ -49,6 +43,11 @@ export default new Router({
       path: '/contact',
       name: 'Contact',
       component: Contact,
+    },
+    {
+      path: '/news',
+      name: 'Contact',
+      component: News,
     },
   ],
 });

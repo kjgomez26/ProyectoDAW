@@ -1,30 +1,27 @@
 // Load the MySQL pool connection
 const pool = require('../data/config');
 
-var Evento = require("../models/eventos.js");
 const EventosController= require('../controllers/EventosController.js');
+
+
 const router = app => {
 
-    app.get('/eventos', autores.getAutores)
+    //CRUD para el cliente
+    app.get('/eventosCalificacion', EventosController.getEventos)
 
 
-    app.get('/eventos/:id', autores.getSingleAutor)
+    app.get('/eventosCalificacion/:id', EventosController.getSingleEvento)
 
-    app.post('/eventos', autores.addAutor)
+    app.post('/eventosCalificacion', EventosController.addEvento)
 
 
-    app.put('/eventos/:id', autores.updateAutor)
+    app.put('/eventosCalificacion/:id', EventosController.updateEvento)
 
-    app.delete('/eventos/:id',autores.deleteAutor)
+    app.delete('/eventosCalificacion/:id', EventosController.deleteEvento)
 
     
-    
-   
-}
 
-module.exports = router;
 
-const router = app => {
     // Display welcome message on the root
     app.get('/', (request, response) => {
         response.send({
@@ -173,6 +170,68 @@ const router = app => {
             response.send('Evento eliminado.');
         });
     });
+
+
+
+    app.post('/add',function (req, res) {
+  let post = new Post(req.body);
+  post.save()
+    .then(() => {
+      res.status(200).json({'business': 'business in added successfully'});
+    })
+    .catch(() => {
+      res.status(400).send("unable to save to database");
+    });
+});
+
+// Defined get data(index or listing) route
+app.get('/',function (req, res) {
+    Post.find(function(err, posts){
+    if(err){
+      res.json(err);
+    }
+    else {
+      res.json(posts);
+    }
+  });
+});
+
+// Defined edit route
+app.get('/edit/:id',function (req, res) {
+  let id = req.params.id;
+  Post.findById(id, function (err, post){
+      if(err) {
+        res.json(err);
+      }
+      res.json(post);
+  });
+});
+
+//  Defined update route
+app.post('/update/:id',function (req, res) {
+    Post.findById(req.params.id, function(err, post) {
+    if (!post)
+      res.status(404).send("data is not found");
+    else {
+        post.title = req.body.title;
+        post.body = req.body.body;
+        post.save().then(() => {
+          res.json('Update complete');
+      })
+      .catch(() => {
+            res.status(400).send("unable to update the database");
+      });
+    }
+  });
+});
+
+// Defined delete | remove | destroy route
+app.delete('/delete/:id',function (req, res) {
+    Post.findByIdAndRemove({_id: req.params.id}, function(err){
+        if(err) res.json(err);
+        else res.json('Successfully removed');
+    });
+});
 }
 
 module.exports = router;

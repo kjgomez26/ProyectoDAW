@@ -1,7 +1,7 @@
 <template>
- <div>
+ <div class="mainN">
   <div class="news">
-   <div class="row"> 
+   <div class="row">
     <div class="col-lg-8">
      <div class="news_items">
       <div class="news_item">
@@ -19,7 +19,7 @@
          <p>Abierto para grupos interesados en la música,este programa se adapta a persona de todas las edades,mediante un esquema flexible</p>
          <strong>Horarios</strong>
          <p>Mañana 9h00 a 14h00 Tardes 15h00 a 20h00</p>
-         <strong>Sede</strong> 
+         <strong>Sede</strong>
          <p>Conservatorio de Música "Nicolo Paganini" Cdla Garzota 1.Av.Hermano Miguel Mz.21 villa 20 Guayaquil-Ecuador</p>
          <strong>Requisito</strong>
          <p>Copia de cedula de identidad y foto tamaño carnet actualizado</p>
@@ -43,7 +43,7 @@
            <p>Abierto para todos aquellos interesados en la musica,este programa se adapta a todas las edades,mediante un esquema flexible.</p>
            <strong>Horarios</strong>
            <p>Mañana 9h00 a 14h00 Tardes 15h00 a 20h00</p>
-           <strong>Sede</strong> 
+           <strong>Sede</strong>
            <p>Conservatorio de Música "Nicolo Paganini" Cdla Garzota 1.Av.Hermano Miguel Mz.21 villa 20 Guayaquil-Ecuador</p>
            <strong>Requisito</strong>
            <p>Copia de cedula de identidad y foto tamaño carnet actualizado</p>
@@ -67,7 +67,7 @@
            <p>El Programa Formal prepara a los alumnos para la obtención del título de “Bachiller en Música” (Acuerdo ministerial 3358).</p>
            <strong>Horarios</strong>
            <p>Mañana 9h00 a 14h00 Tardes 15h00 a 20h00</p>
-           <strong>Sede</strong> 
+           <strong>Sede</strong>
            <p>Conservatorio de Música "Nicolo Paganini" Cdla Garzota 1.Av.Hermano Miguel Mz.21 villa 20 Guayaquil-Ecuador</p>
            <strong>Requisito</strong>
            <p>Copia de cedula de identidad y foto tamaño carnet actualizado</p>
@@ -80,5 +80,15 @@
     </div>
    </div>
   </div>
- </div> 
+ </div>
 </template>
+
+<style>
+.mainN
+{
+  width: 100%;
+  height: 100%;
+  margin-top:150px;
+}
+</style>
+

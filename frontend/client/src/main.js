@@ -24,6 +24,7 @@ import Contact from './components/ContactComponent.vue';
 import News from './components/NewsComponent.vue';
 import Login from './components/LoginComponent.vue';
 import Grafico1 from './components/Grafico1Component.vue';
+import usuario from './components/UsuarioComponent.vue';
 
 const routes = [
   {
@@ -86,6 +87,11 @@ const routes = [
       name: 'grafico1',
       component: Grafico1,
     },
+    {
+      path: '/usuario',
+      name: 'usuario',
+      component: usuario,
+    }
 
 ];
 

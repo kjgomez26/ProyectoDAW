@@ -1,3 +1,4 @@
+drop database db_final;
 create database db_final;
 use db_final;
 
@@ -38,7 +39,9 @@ foreign key (evento) references evento(idEvento));
 
 create table usuario(
 usuario varchar(20) primary key,
-contraseña varchar(20));
+contraseña varchar(20),
+eventos_asistidos int,
+cursos_realizados int);
 
 create table comentario(
 idComentario int auto_increment primary key,
@@ -62,24 +65,19 @@ usuario varchar(20),
 foreign key (usuario) references usuario(usuario));
 
 
-INSERT INTO usuario (usuario,contraseña) 
-	VALUES('cinviram','cinviram');
-INSERT INTO usuario (usuario,contraseña) 
-	VALUES('luiggisao','luiggisao');
-INSERT INTO usuario (usuario,contraseña) 
-	VALUES('kgomez','kgomez');
-INSERT INTO usuario (usuario,contraseña) 
-	VALUES('antho95','antho95');
-INSERT INTO usuario (usuario,contraseña) 
-	VALUES('svallejo','svallejo');
-INSERT INTO usuario (usuario,contraseña) 
-	VALUES('thaisama','thaisama');
-INSERT INTO usuario (usuario,contraseña) 
-	VALUES('alargo','alargo');
-INSERT INTO usuario (usuario,contraseña) 
-	VALUES('csesme','csesme');
-INSERT INTO usuario (usuario,contraseña) 
-	VALUES('efrenpar','efrenpar');
+
+INSERT INTO usuario (usuario,contraseña,eventos_asistidos,cursos_realizados) 
+	VALUES('cinviram','cinviram',10,2);
+INSERT INTO usuario (usuario,contraseña,eventos_asistidos,cursos_realizados) 
+	VALUES('luiggisao','luiggisao',20,3);
+INSERT INTO usuario (usuario,contraseña,eventos_asistidos,cursos_realizados) 
+	VALUES('kgomez','kgomez',30,4);
+INSERT INTO usuario (usuario,contraseña,eventos_asistidos,cursos_realizados) 
+	VALUES('antho95','antho95',15,1);
+INSERT INTO usuario (usuario,contraseña,eventos_asistidos,cursos_realizados) 
+	VALUES('svallejo','svallejo',18,2);
+INSERT INTO usuario (usuario,contraseña,eventos_asistidos,cursos_realizados) 
+	VALUES('thaisama','thaisama',21,3);
 INSERT INTO profesor(idProfesor, nombre, nacionalidad)
 	VALUES(1,'Lucia Lopez', 'italiana');
 INSERT INTO profesor(idProfesor, nombre, nacionalidad)
@@ -103,15 +101,15 @@ INSERT INTO profesor(idProfesor, nombre, nacionalidad)
 INSERT INTO profesor(idProfesor, nombre, nacionalidad)
 	VALUES(11,'Luciano Venturi', 'italiano');
 INSERT INTO curso(idCurso,tipo,categoriaInstrumento,cantEstudiantes,descripcion)
-	VALUES(1,'libre','viento',25,'Abierto para grupos interesados en la música.');
+	VALUES(1,'libre','guitarra',25,'Abierto para grupos interesados en la música.');
 INSERT INTO curso(idCurso,tipo,categoriaInstrumento,cantEstudiantes,descripcion)
-	VALUES(2,'libre','percusion',20,'Abierto para grupos interesados en la música');
+	VALUES(2,'libre','violin',20,'Abierto para grupos interesados en la música');
 INSERT INTO curso(idCurso,tipo,categoriaInstrumento,cantEstudiantes,descripcion)
-	VALUES(3,'libre','cuerda',23,'Abierto para grupos interesados en la música');
+	VALUES(3,'libre','piano',23,'Abierto para grupos interesados en la música');
 INSERT INTO curso(idCurso,tipo,categoriaInstrumento,cantEstudiantes,descripcion)
-	VALUES(4,'formal','cuerda',15,'prepara a los alumnos para la obtención del título de “Bachiller en Música”');
+	VALUES(4,'formal','violoncello',15,'prepara a los alumnos para la obtención del título de “Bachiller en Música”');
 INSERT INTO curso(idCurso,tipo,categoriaInstrumento,cantEstudiantes,descripcion)
-	VALUES(5,'formal','viento',10,'prepara a los alumnos para la obtención del título de “Bachiller en Música”');
+	VALUES(5,'formal','bajo',10,'prepara a los alumnos para la obtención del título de “Bachiller en Música”');
                     
 INSERT INTO evento(idEvento, titulo, descripcion,fecha,lugar,organizador)
 	VALUES(1, 'Tercer Festival Internacional de Música','Es un evento social y cultura, el cual brinda educación a través de la música clásica fomentando el intercambio de culturas entre artistas de diferentes lugares de Ecuador y Latinoamérica','2019-09-05','Auditorio del MAAC',2);
@@ -123,3 +121,19 @@ INSERT INTO evento(idEvento, titulo, descripcion,fecha,lugar,organizador)
 	VALUES(4, 'MasterClass en Guayaquil','Este es un evento que se realiza con el fin de fortalecer y desarrollar el proceso académico de los músicos guayaquileños','2019-10-22','Conservatorio Niccoló Paganini',2);
 INSERT INTO evento(idEvento, titulo, descripcion,fecha,lugar,organizador)
 	VALUES(5, 'Concierto de Grandes Orquestas','En este concierto se pondrá en el escenario el trabajo realizado a lo largo del presente año lectivo con las agrupaciones del Conservatorio','2019-11-13','Teatro Sánchez Aguilar',4);
+    
+    INSERT INTO suscriptor(correo,nombre,ciudad,usuario)
+	VALUES('cinviram@espol.edu.ec','Cindy Ramirez','Guayaquil','cinviram');
+    
+INSERT INTO suscriptor(correo,nombre,ciudad,usuario)
+	VALUES('luiggisao@espol.edu.ec','Luiggi Alarcon','Guayaquil','luiggisao');
+
+INSERT INTO suscriptor(correo,nombre,ciudad,usuario)
+	VALUES('kgomez@espol.edu.ec','Kevin Gomez','Quito','kgomez');
+
+INSERT INTO suscriptor(correo,nombre,ciudad,usuario)
+	VALUES('antho95@espol.edu.ec','Anthony Espinoza','Cuenca','antho95');
+
+    
+INSERT INTO suscriptor(correo,nombre,ciudad,usuario)
+	VALUES('thaisama@espol.edu.ec','Thaily Samaniego','Riobamba','thaisama');

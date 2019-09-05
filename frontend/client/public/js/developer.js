@@ -6,7 +6,7 @@ $(document).ready(function () {
  			var div1 = $('<div></div>').addClass('row row-lg-eq-height');
  			var div2 = $('<div></div>').addClass('col-lg-6 speaker_col reset_col');
 			var div3 = $('<div></div>').addClass('speaker_image');
-			div3.css("background-image","url(images/"+ $(this).find("image").text()+")");
+			div3.css("background-image","url(images/"+ $(this).find("images").text()+")");
 			var div4 = $('<div></div>').addClass('col-lg-6');
 			var div5 = $('<div></div>').addClass('speaker_content d-flex flex-column align-items-start justify-content-center');
 			var div6 = $('<div></div>').addClass('speaker_title');

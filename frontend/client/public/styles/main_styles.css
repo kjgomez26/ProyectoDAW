@@ -473,10 +473,10 @@ section
 4. Home
 *********************************/
 
-.home2
+.home
 {
 	width: 100%;
-	height: 100px;
+	height: 100vh;
 }
 .home_background
 {
@@ -1350,14 +1350,4 @@ section
 	font-weight: 500;
 	color: #bbbbbb;
 	margin-top: 7px;
-}
-
-.carousel-inner img {
-      width: 100%;
-      height: 100%;
-  }
-
-.subtitle{
-	color:#4D45E5;
-	font-weight: 500;
 }

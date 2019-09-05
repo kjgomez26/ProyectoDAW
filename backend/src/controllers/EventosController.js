@@ -16,7 +16,7 @@ exports.getEventos = async (req, response) => {
 
 // Get single Autor by ID
 exports.getSingleEvento = async (req, res) => {
-  Autor.findById(req.params.id)
+  Evento.findById(req.params.id)
     .then(note => {
         if(!note) {
             return res.status(404).send({
@@ -38,11 +38,14 @@ exports.getSingleEvento = async (req, res) => {
 
 // Add a new Autor
 exports.addEvento = async (req, res) => {
-    const autor = new Autor({
+    const autor = new Evento({
+        "idEvento":req.body.idEvento,
         "titulo" : req.body.titulo,
-        "autores" : req.body.autores,
-        "isbn" : req.body.isbn,
-        "calificacion_promedio" : req.body.calificacion_promedio
+        "descripcion" : req.body.descripcion,
+        "lugar" : req.body.lugar,
+        "organizador": req.body.organizador,
+        "calificacion_evento" : req.body.calificacion_evento,
+        "usuario": req.body.usuario
     });
 
     // Save autor in the database
@@ -58,11 +61,14 @@ exports.addEvento = async (req, res) => {
 
 // Update an existing Autor
 exports.updateEvento = async (req, res) => {
-    Autor.findByIdAndUpdate(req.params.id, {
+    Evento.findByIdAndUpdate(req.params.id, {
+        "idEvento":req.body.idEvento,
         "titulo" : req.body.titulo,
-        "autores" : req.body.autores,
-        "isbn" : req.body.isbn,
-        "calificacion_promedio" : req.body.calificacion_promedio
+        "descripcion" : req.body.descripcion,
+        "lugar" : req.body.lugar,
+        "organizador": req.body.organizador,
+        "calificacion_evento" : req.body.calificacion_evento,
+        "usuario": req.body.usuario
     }, {new: true})
     .then(note => {
         if(!note) {
@@ -85,7 +91,7 @@ exports.updateEvento = async (req, res) => {
 
 // Delete an Autor
 exports.deleteEvento = async (req, res) => {
-  Autor.findByIdAndRemove(req.params.id)
+  Evento.findByIdAndRemove(req.params.id)
     .then(note => {
         if(!note) {
             return res.status(404).send({

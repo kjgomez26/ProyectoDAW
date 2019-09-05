@@ -7,17 +7,17 @@ const EventosController= require('../controllers/EventosController.js');
 const router = app => {
 
     //CRUD para el cliente
-    app.get('/eventosCalificacion', EventosController.getEventos)
+    app.get('/eventos', EventosController.getEventos)
 
 
-    app.get('/eventosCalificacion/:id', EventosController.getSingleEvento)
+    app.get('/eventos/:id', EventosController.getSingleEvento)
 
-    app.post('/eventosCalificacion', EventosController.addEvento)
+    app.post('/add', EventosController.addEvento)
 
 
-    app.put('/eventosCalificacion/:id', EventosController.updateEvento)
+    app.put('/update/:id', EventosController.updateEvento)
 
-    app.delete('/eventosCalificacion/:id', EventosController.deleteEvento)
+    app.delete('/delete/:id', EventosController.deleteEvento)
 
     
 
@@ -173,7 +173,7 @@ const router = app => {
 
 
 
-    app.post('/add',function (req, res) {
+ /*   app.post('/add',function (req, res) {
   let post = new Post(req.body);
   post.save()
     .then(() => {
@@ -231,7 +231,7 @@ app.delete('/delete/:id',function (req, res) {
         if(err) res.json(err);
         else res.json('Successfully removed');
     });
-});
+});*/
 }
 
 module.exports = router;

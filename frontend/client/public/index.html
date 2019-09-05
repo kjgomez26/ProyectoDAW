@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Conservatorio Niccolo Paganini</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Conference project">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>styles/bootstrap4/bootstrap.min.css">
     <link href="<%= BASE_URL %>plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>plugins/OwlCarousel2-2.2.1/owl.carousel.css">
@@ -19,19 +18,19 @@
     <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>styles/contact_responsive.css">
     <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>styles/speakers_responsive.css">
     <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>styles/responsive.css">
-    <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>styles/events.css">
-    <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>styles/news.css">
-    <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>styles/news_responsive.css">
-    <link rel="stylesheet" type="text/css" href="styles/events_responsive.css">
+    <link rel="stylesheet" type="text/css" href="styles/events.css">
+      <link rel="stylesheet" type="text/css" href="styles/news.css">
+  <link rel="stylesheet" type="text/css" href="styles/news_responsive.css">
+  <link rel="stylesheet" type="text/css" href="styles/events_responsive.css">
     <link rel="stylesheet" href="<%= BASE_URL %>styles/stylesbyme.css">
     <link href="<%= BASE_URL %>styles/introjs.css" rel="stylesheet"> <!--LA: IntroJs para la navegacion-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
    crossorigin=""/> <!--LA map-->
-</head>
+    <title>mevnexample</title>
   </head>
-<body>
-  <div class="super_container">
+  <body>
+ <div class="super_container">
        <div class="menu trans_500" >
       <div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
         <div class="menu_close_container"><div class="menu_close"></div></div>
@@ -226,25 +225,23 @@
     </footer>
 </div>
 </div>
-<!--LA tryhardeando el map-->
- <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    <!-- built files will be auto injected -->
+     <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
    crossorigin=""></script>
-    <script type="text/javascript">
+
+   <script type="text/javascript">
           document.getElementById('startButton').onclick = function() {
             introJs().setOption('doneLabel', 'Next page').start().oncomplete(function() {
               window.location.href = 'about.html?multipage=true';
             });
           };
      </script>
-    <!--LA fin-->
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js'></script>
 
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script type="text/javascript" src="<%= BASE_URL %>js/vueF.js"></script>
+     <script type="text/javascript" src="<%= BASE_URL %>js/vueF.js"></script>
 
-
-    <script type="text/javascript" src="<%= BASE_URL %>js/intro.js"></script> <!--LA-->
+   <script type="text/javascript" src="<%= BASE_URL %>js/intro.js"></script> <!--LA-->
     <script src="<%= BASE_URL %>js/jquery-3.2.1.min.js"></script>
     <script src="<%= BASE_URL %>styles/bootstrap4/popper.js"></script>
     <script src="<%= BASE_URL %>styles/bootstrap4/bootstrap.min.js"></script>

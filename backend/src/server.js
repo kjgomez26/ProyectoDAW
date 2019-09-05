@@ -3,6 +3,7 @@ const port = 3000;
 const bodyParser = require('body-parser');
 const routes = require('./routes/routes')
 const app = express();
+const cors = require('cors');
 
 //Base de dato no relacional
 var mongoose = require('mongoose');
@@ -13,6 +14,7 @@ db.once("open", function(callback){
   console.log("Connection Succeeded");
 });
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true,

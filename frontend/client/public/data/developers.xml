@@ -1,3 +1,22 @@
 <developers>
 	<developer>
-		<nombre>Luiggi Alarcón</nombre><carrera>Estudiante de ingeniería en Computación</carrera><image>speaker_1.jpg</image></developer><developer><nombre>Cindy Ramirez</nombre><carrera>Estudiante de ingeniería en Computación</carrera><image>speaker_2.jpg</image></developer><developer><nombre>Kevin Gómez</nombre><carrera>Estudiante de ingeniería en Computación</carrera><image>speaker_3.jpg</image></developer><developer><nombre>Thaily Samaniego</nombre><carrera>Estudiante de ingeniería en Computación</carrera><image>speaker_4.jpg</image></developer></developers>
+		<nombre>Luiggi Alarcón</nombre>
+		<carrera>Estudiante de ingeniería en Computación</carrera>
+		<images>speaker_1.jpg</images>
+	</developer>
+	<developer>
+		<nombre>Cindy Ramirez</nombre>
+		<carrera>Estudiante de ingeniería en Computación</carrera>
+		<images>speaker_2.jpg</images>
+	</developer>
+	<developer>
+		<nombre>Kevin Gómez</nombre>
+		<carrera>Estudiante de ingeniería en Computación</carrera>
+		<images>speaker_3.jpg</images>
+	</developer>
+	<developer>
+		<nombre>Thaily Samaniego</nombre>
+		<carrera>Estudiante de ingeniería en Computación</carrera>
+		<images>speaker_4.jpg</images>
+	</developer>
+</developers>

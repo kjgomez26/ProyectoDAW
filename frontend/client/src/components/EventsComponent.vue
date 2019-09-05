@@ -199,14 +199,9 @@
           </div>
         </div>
         <div class="row">
-          <div class="col">
-            <div class="pagination">
-              <ul>
-                <li class="active"><a href="#">01.</a></li>
-                <li><a href="#">02.</a></li>
-                <li><a href="#">03.</a></li>
-              </ul>
-            </div>
+          <div class="col h5E">
+          <h5>Calificaciones de eventos</h5>
+            <a class="btn btn-primary mb-2" href="/eventos">Ver calificaciones de eventos</a>
           </div>
         </div>
       </div>
@@ -251,5 +246,10 @@
   width: 100%;
   height: 100%;
   margin-top:200px;
+}
+
+.h5E{
+  margin-top:100px;
+  text-align: center;
 }
 </style>

@@ -5,27 +5,6 @@
       <div class="col-lg-6 mainC">
         <div class="contact_form_container">
           <div class="contact_form_title">Contáctanos</div>
-          <form method="POST" action="/send-email" class="contact_form" id="contact_form">
-              <label for="exampleFormControlSelect1">Nombre</label><!--TODO: ver for-->
-            <input type="text" class="contact_input" placeholder="John Doe" required="required" v-model="first_name">
-            <label for="exampleFormControlSelect1">Email</label>
-            <input type="email" class="contact_input" placeholder="johndoe@mail.com" required="required" v-model="email">
-            <div class="form-group"> <!--th-->
-                <label for="exampleFormControlSelect1">Ciudad</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option>Guayaquil</option>
-                  <option>Quito</option>
-                  <option>Cuenca</option>
-                  <option>Loja</option>
-                  <option>Otro</option>
-                </select>
-                </div>
-                <label for="exampleFormControlSelect1">Subject</label>
-            <input type="text" class="contact_input" placeholder="Asunto" required="required" v-model="asunto">
-            <label for="exampleFormControlSelect1">Mensaje</label>
-            <textarea name="contact_textarea" id="contact_textarea" class="contact_textarea contact_input" placeholder="Comment..." required="required" v-model="comentario"></textarea>
-            <button class="button contact_button"><span>Send Message</span></button>
-          </form>
         </div>
       </div>
       <div class="col-lg-5 offset-lg-1 mainC">
@@ -69,7 +48,7 @@
 }
 </style>
 <!--TODO: Thai email -->
-<script>
+<!--script>
 import axios from 'axios'
 import router from '../../../../backend/src/routes/routes'
 export default {
@@ -100,4 +79,4 @@ export default {
     }
   }
 }
-</script>
+</script-->

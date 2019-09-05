@@ -5,12 +5,11 @@ nodeMailer = require('nodemailer');
 /*app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());*/
 
-<<<<<<< HEAD
 //thai fin
-=======
+
 const EventosController= require('../controllers/EventosController.js');
 
->>>>>>> a79375952ca874a0415d5e85189e1af7a21e8626
+
 
 const router = app => {
 
@@ -180,7 +179,7 @@ const router = app => {
             response.send('Evento eliminado.');
         });
     });
-<<<<<<< HEAD
+
     /*TODO: Thai*/
     app.post('/send-email', function (req, res) {
         let transporter = nodeMailer.createTransport({
@@ -229,7 +228,6 @@ const router = app => {
 }); //post
 
      
-=======
 
 
 
@@ -292,7 +290,7 @@ app.delete('/delete/:id',function (req, res) {
         else res.json('Successfully removed');
     });
 });*/
->>>>>>> a79375952ca874a0415d5e85189e1af7a21e8626
+
 }
 
 module.exports = router;

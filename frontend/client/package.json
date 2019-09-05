@@ -32,7 +32,7 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-<<<<<<< HEAD
+
     "rules": {
       "linebreak-style": 0,
       "max-len": [
@@ -43,9 +43,8 @@
       ],
       "no-tabs": 0
     },
-=======
     "rules": {},
->>>>>>> a79375952ca874a0415d5e85189e1af7a21e8626
+
     "parserOptions": {
       "parser": "babel-eslint"
     }

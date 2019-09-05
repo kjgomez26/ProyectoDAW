@@ -5,6 +5,27 @@
       <div class="col-lg-6 mainC">
         <div class="contact_form_container">
           <div class="contact_form_title">Contáctanos</div>
+          <form @submit.prevent="register">
+              <label for="exampleFormControlSelect1" >Nombre</label><!--TODO: ver for-->
+            <input type="text" class="contact_input" placeholder="John Doe" required="required" v-model="post.first_name">
+            <label for="exampleFormControlSelect1">Email</label>
+            <input type="email" class="contact_input" placeholder="johndoe@mail.com" required="required" v-model="post.email">
+            <div class="form-group"> <!--th-->
+                <label for="exampleFormControlSelect1">Ciudad</label>
+                <select class="form-control" id="exampleFormControlSelect1" v-model="post.ciudad">
+                  <option>Guayaquil</option>
+                  <option>Quito</option>
+                  <option>Cuenca</option>
+                  <option>Loja</option>
+                  <option>Otro</option>
+                </select>
+                </div>
+                <label for="exampleFormControlSelect1">Subject</label>
+            <input type="text" class="contact_input" placeholder="Asunto" required="required" v-model="post.asunto">
+            <label for="exampleFormControlSelect1">Mensaje</label>
+            <textarea name="contact_textarea" id="contact_textarea" class="contact_textarea contact_input" placeholder="Comment..." required="required" v-model="post.comentario"></textarea>
+            <button class="button contact_button" ><span>Send Message</span></button>
+          </form>
         </div>
       </div>
       <div class="col-lg-5 offset-lg-1 mainC">
@@ -48,35 +69,22 @@
 }
 </style>
 <!--TODO: Thai email -->
-<!--script>
-import axios from 'axios'
-import router from '../../../../backend/src/routes/routes'
+<script>
 export default {
   data () {
     return {
-      first_name: '',
-      email: '',
-      asunto:'',
-      comentario:''
-      //password: ''
+      post:{
+        "email": "luiggi.alg97@gmail.com"
+      }
     }
   },
   methods: {
     register () {
-      axios.post('/send-email',
-        {
-          first_name: this.first_name,
-          last_name: this.last_name,
-          email: this.email,
-          password: this.password
-        }
-      ).then((res) => {
-        router.push({ name: 'Login' })
-        console.log(res)
-      }).catch((err) => {
-        console.log(err)
-      })
+    let uri="http://localhost:3000/send-email"
+      this.axios.post(uri, this.post).then(() => {
+        this.$router.push({name: '/contact'});
+      });
     }
   }
 }
-</script-->
+</script>

@@ -201,18 +201,19 @@ const router = app => {
 
     /*TODO: Thai*/
     app.post('/send-email', function (req, res) {
+        console.log(req.body.email);
         let transporter = nodeMailer.createTransport({
             service: 'gmail',
             auth: {
-                user: 'youemail@gmail.com',//process.env.EMAIL || 'abc@gmail.com', // TODO: your gmail account
-                pass: 'yourpass'//process.env.PASSWORD || '1234' // TODO: your gmail password
+                user: 'thaiilizina@gmail.com',//process.env.EMAIL || 'abc@gmail.com', // TODO: your gmail account
+                pass: 'AnotherDay'//process.env.PASSWORD || '1234' // TODO: your gmail password
             }
         });
         
         // Step 2
         let mailOptions = {
             from: 'abc@gmail.com', // TODO: email sender
-            to: 'thaiilizina@gmail.com', // TODO: email receiver
+            to: req.body.email, // TODO: email receiver
             subject: 'Nodemailer - Test',
             text: 'Wooohooo it works!!'
         };
@@ -220,9 +221,9 @@ const router = app => {
         // Step 3
         transporter.sendMail(mailOptions, (err, data) => {
             if (err) {
-                return log('Error occurs');
+                return console.log('Error occurs');
             }
-            return log('Email sent!!!');
+            return console.log('Email sent!!!');
         })
         /*let transporter = nodeMailer.createTransport({
             host: 'smtp.gmail.com',

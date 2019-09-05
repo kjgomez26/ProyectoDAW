@@ -62,7 +62,7 @@ var svg = d3.select("body").append("svg")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
  
-d3.json("http://localhost:3002/cursos", function(error, data) {
+d3.json("http://localhost:3000/cursos", function(error, data) {
  
     data.forEach(function(d) {
         d.categoriaInstrumento = d.categoriaInstrumento;

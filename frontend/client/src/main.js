@@ -23,6 +23,7 @@ import Developers from './components/DevelopersComponent.vue';
 import Contact from './components/ContactComponent.vue';
 import News from './components/NewsComponent.vue';
 import Login from './components/LoginComponent.vue';
+import Grafico1 from './components/Grafico1Component.vue';
 
 const routes = [
   {
@@ -79,6 +80,11 @@ const routes = [
       path: '/news',
       name: 'News',
       component: News,
+    },
+    {
+      path: '/grafico1',
+      name: 'grafico1',
+      component: Grafico1,
     },
 
 ];

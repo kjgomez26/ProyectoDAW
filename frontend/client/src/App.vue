@@ -24,6 +24,7 @@
                         <a id='startButton' class="btn btn-success" href="javascript:void(0);" onclick="javascript:introJs().start();">
                               Guia
                             </a>
+                        <h5>{{this.$route.params.user}}</h5>
                         <ul data-step='8' data-intro='Visita nuestras redes sociales'> <!--LA redes sociales-->
                           <li v-for='red in this.post.redSociales' :key="red.id">   <!--Vfor-->
                             <a v-bind:href="red.hrefi">
@@ -55,7 +56,7 @@
                           <!--search-->
                           <div class="header_extra ml-auto">
                             <div class="header_search"><i class="fa fa-search" aria-hidden="true"></i></div>
-                            <div class="button header_button"><a href="cms/login.html">Ingresar</a></div>
+                            <div class="button header_button"><a href="/login">Ingresar</a></div>
                           </div>
                         </div>
                       </div>
@@ -103,6 +104,8 @@
                       {"href":"speakers","nombre":"Docentes","class":"","datastep":"3","dataintro":"Aqui encontraras los profesores del conservatorio"},{"href":"events","nombre":"Eventos","class":"","datastep":"4","dataintro":"Detalles sobre los proximos eventos"},
                       {"href":"news","nombre":"Cursos","class":"","datastep":"5","dataintro":"Conoce todo sobre nuestros programas"},{"href":"developers","nombre":"Equipo","class":"","datastep":"6","dataintro":"Conoce nuestro equipo de Desarrollo"},
                       {"href":"contact","nombre":"Contáctanos","class":"","datastep":"7","dataintro":"Deja tu mensaje y te lo responderemos"}]
+
+
 
           }
         }

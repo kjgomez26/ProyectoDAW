@@ -22,8 +22,14 @@ import Events from './components/EventsComponent.vue';
 import Developers from './components/DevelopersComponent.vue';
 import Contact from './components/ContactComponent.vue';
 import News from './components/NewsComponent.vue';
+import Login from './components/LoginComponent.vue';
 
 const routes = [
+  {
+    name: 'login',
+    path: '/login',
+    component: Login
+  },
   {
       name: 'home',
       path: '/',

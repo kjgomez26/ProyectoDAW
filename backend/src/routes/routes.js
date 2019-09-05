@@ -19,6 +19,8 @@ const router = app => {
 
     app.delete('/delete/:id', EventosController.deleteEvento)
 
+    app.get('/eventosUsuario/:usuario', EventosController.getUser)
+
     
 
 

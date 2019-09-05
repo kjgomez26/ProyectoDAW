@@ -1,10 +1,17 @@
 <template>
-  <div class="mainIndex">
+  <div>
       <h1>Eventos</h1>
-        <div class="row">
-          <div class="col-md-10"></div>
+        <div class="row mainIndex">
+          <div class="col-md-10"><h1>Eventos</h1></div>
           <div class="col-md-2">
-            <router-link :to="{ name: 'create' }" class="btn btn-primary">Buscar por usuario</router-link>
+            <h5>Elige un usuario</h5>
+            <form>
+              <select v-model="usuario">
+                    <option v-for="user in users" :key="user.usuario" >{{user.usuario}}</option>  
+              </select>
+              <h1></h1>
+              <button class="btn btn-success" @click.prevent="mostrar">Mostrar</button>
+            </form>
           </div>
         </div><br />
 
@@ -38,13 +45,20 @@
   export default {
       data() {
         return {
-          posts: []
+          posts: [],
+          users:[],
+          usuario: "luiggisao"
         }
       },
       created() {
       let uri = 'http://localhost:3000/eventos';
       this.axios.get(uri).then(response => {
         this.posts = response.data;
+
+      let uri2 = 'http://localhost:3000/usuarios';
+      this.axios.get(uri2).then(response => {
+        this.users = response.data;
+      })
       });
     },
     methods: {
@@ -54,6 +68,15 @@
         this.axios.delete(uri).then( ()=> {
           this.posts.splice(this.posts.indexOf(id), 1);
         });
+      },
+
+      mostrar()
+      { 
+        let usuario1 = this.$data.usuario;
+        let uri = 'http://localhost:3000/eventosUsuario/'+usuario1;
+        this.axios.get(uri).then( response => {
+          this.posts = response.data;
+        })
       }
     }
   }

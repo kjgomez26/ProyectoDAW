@@ -1,8 +1,8 @@
 <template>
-  <div class="mainCr">
-    <h1>Create A Post</h1>
+  <div>
+    <h1>Calificar</h1>
     <form @submit.prevent="addPost">
-      <div class="row">
+      <div class="row mainCr">
         <div class="col-md-6">
           <div class="form-group">
             <label>Titulo de evento:</label>

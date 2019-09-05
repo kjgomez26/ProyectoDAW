@@ -14,6 +14,16 @@ exports.getEventos = async (req, response) => {
         });
 }
 
+//Get Eventos de usuario
+exports.getUser= async (req, response) => {
+    Evento.find({usuario:req.params.usuario})
+        .then(notes => {
+            response.send(notes);
+        }).catch(err => {
+            console.log("ERROR")
+        });
+}
+
 // Get single Autor by ID
 exports.getSingleEvento = async (req, res) => {
   Evento.findById(req.params.id)

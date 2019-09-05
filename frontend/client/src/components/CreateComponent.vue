@@ -35,7 +35,7 @@
         </div>
         </div>
         <div class="form-group">
-          <button class="btn btn-primary">Create</button>
+          <button class="btn btn-primary">Submit</button>
         </div>
     </form>
   </div>
@@ -52,7 +52,7 @@
           "lugar" : this.$route.params.lugar,
           "organizador": this.$route.params.organizador,
           "calificacion_evento" : this.$route.params.calificacion_evento,
-          "usuario": this.$route.params.usuario
+          "usuario": 'anonimo'
           }
         }
     },

@@ -34,7 +34,6 @@
                   <td>{{  post.calificacion_evento  }}</td>
                   <td>{{  post.usuario  }}</td>
                   <td><router-link :to="{name: 'create', params: { id: post.idEvento, titulo: post.titulo, descripcion: post.descripcion, lugar: post.lugar, }}" class="btn btn-primary">calificar</router-link></td>
-                  <td><button class="btn btn-danger" @click.prevent="deletePost(post._id)">Borrar</button></td>
                 </tr>
             </tbody>
         </table>

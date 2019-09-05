@@ -180,6 +180,25 @@ const router = app => {
         });
     });
 
+
+    //Suscriptor-Busqueda por usuario
+    //Obtener todos
+    app.get('/suscriptores', (request, response) => {
+        pool.query('SELECT * FROM suscriptor', (error, result) => {
+            if (error) throw error;
+
+            response.send(result);
+        });
+    });
+    //Obtener info por nombre de user
+    app.get('/suscriptores/:usuario', (request, response) => {
+        const usuario = request.params.usuario;
+        pool.query('SELECT * FROM suscriptor WHERE usuario = ?', usuario, (error, result) => {
+            if (error) throw error;
+            response.send(result);
+        });
+    });
+
     /*TODO: Thai*/
     app.post('/send-email', function (req, res) {
         let transporter = nodeMailer.createTransport({

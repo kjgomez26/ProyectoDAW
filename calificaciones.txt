@@ -1,0 +1,11 @@
+idEvento,titulo,descripcion,lugar,organizador,calificacion_evento,usuario
+1,Tercer Festival Internacional de Música,Es un evento social y cultura, el cual brinda educación a través de la música clásica fomentando el intercambio de culturas entre artistas de diferentes lugares de Ecuador y Latinoamérica,Auditorio del MAAC,2,4.90,cinviram
+2,Gran noche de talentos,Evento pagado donde los alumnos demostraran su talento|Auditorio del MAAC,1,4.50,luiggisao
+3,Segundo Festival de Orquestas,Festival dirigido por las mejores orquestas de la ciudad de Guayaquil,Teatro Centro Civico,2,3.50,kgomez
+4,MasterClass en Guayaquil,Este es un evento que se realiza con el fin de fortalecer y desarrollar el proceso académico de los músicos guayaquileños,Conservatorio Niccoló Paganini,2,4.63,thaisama
+5,Concierto de Grandes Orquestas,En este concierto se pondrá en el escenario el trabajo realizado a lo largo del presente año lectivo con las agrupaciones del Conservatorio,Teatro Sánchez Aguilar,4,2.71,antho95
+6,Primer Festival de Orquestas,Festival dirigido por las mejores orquestas de la ciudad de Guayaquil,Teatro Centro Civico,3,4.44,cinviram
+7,Segundo Festival de Orquestas,Festival dirigido por las mejores orquestas de la ciudad de Guayaquil,Teatro Centro Civico,2,4.77,luiggisao
+8,Concierto de violin,Concierto dirigido a las personas que aman los instrumentos de cuerda,Conservatorio Niccolo Paganini,4,5.00,luiggisao
+9,Concierto de saxofon,Concierto dirigido a los estudiantes del conservatorio, entrada gratuita,Conservatorio Niccolo Paganini,1,3.55,kgomez
+10,Concierto de la Orquesta Filarmonica Juvenil de Guayaquil,En este concierto se pondrá en el escenario el trabajo realizado a lo largo del presente año lectivo con las agrupaciones del Conservatorio,Conservatorio Niccolo Paganini,1,4.66,thaisama

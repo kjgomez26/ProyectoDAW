@@ -24,7 +24,7 @@
         <span class="carousel-control-next-icon"></span>
         </a>
     </div>
-    <div class='container'>
+       <div class='container'>
       <div class='row'>
         <div class='col-lg-12 text-left'>
           <h3 class='subtitle' data-step='1' data-intro='Conoce nuestro conservatorio'>Descripcion</h3>

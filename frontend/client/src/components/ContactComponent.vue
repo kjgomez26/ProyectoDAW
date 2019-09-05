@@ -1,8 +1,8 @@
 <template>
-  <div class="mainC">
-      <div class="container mt-5 mb-5"> <!-- añadi margins-->
+  <div>
+    <div class="container"> <!-- añadi margins-->
     <div class="row">
-      <div class="col-lg-6">
+      <div class="col-lg-6 mainC">
         <div class="contact_form_container">
           <div class="contact_form_title">Contáctanos</div>
           <form method="POST" action="/send-email" class="contact_form" id="contact_form">
@@ -28,7 +28,7 @@
           </form>
         </div>
       </div>
-      <div class="col-lg-5 offset-lg-1">
+      <div class="col-lg-5 offset-lg-1 mainC">
         <!--FIXME: arreglar margin-->
         <img src="https://images.unsplash.com/photo-1559553211-523e51d8fb08?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="saxo">
 

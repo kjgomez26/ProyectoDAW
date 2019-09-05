@@ -1,20 +1,93 @@
 <template>
-  <div>
-    <div class='container'>
-      <div class='row'>
-        <div class='col-lg-12 text-left'>
-          <h3 class='subtitle' data-step='1' data-intro='Conoce nuestro conservatorio'>Descripcion</h3>
-            <p>El Conservatorio Particular de Música “Niccolo Paganini” es una institución dedicada a la formación de músicos profesionales
-            <p>La entidad está adscrita al Ministerio de Educación, mediante un acuerdo ministerial otorgado hace ya un año. Uno de los objetivos de la pareja,  propietaria del nuevo espacio educativo de música, es forjar nuevos talentos, sobre todo en violín, “porque los conservatorios que existen han formado pianistas en su mayoría y aquí queremos darle más impulso a personas que quieran ejecutar otro instrumento”, menciona Rivas.</p>
-            <p>Agrega que el conservatorio lleva el nombre de un músico virtuoso que sirve como principal referente de los violinistas. “Quien desee llegar a ser excelente con el violín debe conocer y aprender de Paganini”, dice.</p>
-            <p>La institución cuenta con un auditorio con capacidad para 80 personas. Allí se realizarán certámenes, conciertos, seminarios y conferencias de música. Además, hay pequeños cuartos donde se dictarán las clases prácticas individuales, y en otros salones más grandes del conservatorio se ofrecerán las clases teóricas grupales.</p>
-            <h3 class='subtitle' data-step='3' data-intro='Fecha de fundación'>Fecha de Fundacion</h3>
-            <p>Patricio Jaramillo Carrillo (Violista, Concertista y Director de Orquesta)
-            Nelly Rivas Chávez (Violinista - Concertista)</p>
-            <h3 class='subtitle' data-step="2" data-intro="Nuestra misión">Misión</h3>
-              <p>Formar íntegramente profesionales en la música que se constituyan en mensajeros y multiplicadores de la expresión artístico – musical, a la vez que en paradigmas de la recuperación y promoción de la tradición musical ecuatoriana y universal</p>
+ <div>
+  <div class="news">
+   <div class="row">
+    <div class="col-lg-8 mainN">
+     <div class="news_items">
+      <div class="news_item">
+       <div class="news_image_container">
+        <div class="news_image">
+         <img src="images/news_1.jpg" alt="">
         </div>
+       </div>
+       <div class="news_body">
+        <div class="news_title"><a href="#">Cursos libres Individuales</a>
+        </div>
+        <div class="new_info">
+        </div>
+        <div class="new_text">
+         <p>Abierto para grupos interesados en la música,este programa se adapta a persona de todas las edades,mediante un esquema flexible</p>
+         <strong>Horarios</strong>
+         <p>Mañana 9h00 a 14h00 Tardes 15h00 a 20h00</p>
+         <strong>Sede</strong>
+         <p>Conservatorio de Música "Nicolo Paganini" Cdla Garzota 1.Av.Hermano Miguel Mz.21 villa 20 Guayaquil-Ecuador</p>
+         <strong>Requisito</strong>
+         <p>Copia de cedula de identidad y foto tamaño carnet actualizado</p>
+        </div>
+        <div class="button new_button"><a href="#">Inscribite ahora></a>
+        </div>
+       </div>
       </div>
+      <div class="news_item">
+       <div class="new_image_container">
+         <div class="news_image">
+           <img src="images/news_2.jpg" alt="">
+         </div>
+       </div>
+       <div class="new_body">
+         <div class="new_title"><a href="#">Cursos Libres Grupales</a>
+         </div>
+         <div class="new_info">
+         </div>
+         <div class="new_text">
+           <p>Abierto para todos aquellos interesados en la musica,este programa se adapta a todas las edades,mediante un esquema flexible.</p>
+           <strong>Horarios</strong>
+           <p>Mañana 9h00 a 14h00 Tardes 15h00 a 20h00</p>
+           <strong>Sede</strong>
+           <p>Conservatorio de Música "Nicolo Paganini" Cdla Garzota 1.Av.Hermano Miguel Mz.21 villa 20 Guayaquil-Ecuador</p>
+           <strong>Requisito</strong>
+           <p>Copia de cedula de identidad y foto tamaño carnet actualizado</p>
+         </div>
+         <div class="button new_button"><a href="#">Inscribite ahora></a>
+         </div>
+       </div>
+      </div>
+      <div class="news_item">
+       <div class="new_image_container">
+         <div class="news_image">
+           <img src="images/news_3.jpg" alt="">
+         </div>
+       </div>
+       <div class="new_body">
+         <div class="new_title"><a href="#">Programa Formal</a>
+         </div>
+         <div class="new_info">
+         </div>
+         <div class="new_text">
+           <p>El Programa Formal prepara a los alumnos para la obtención del título de “Bachiller en Música” (Acuerdo ministerial 3358).</p>
+           <strong>Horarios</strong>
+           <p>Mañana 9h00 a 14h00 Tardes 15h00 a 20h00</p>
+           <strong>Sede</strong>
+           <p>Conservatorio de Música "Nicolo Paganini" Cdla Garzota 1.Av.Hermano Miguel Mz.21 villa 20 Guayaquil-Ecuador</p>
+           <strong>Requisito</strong>
+           <p>Copia de cedula de identidad y foto tamaño carnet actualizado</p>
+         </div>
+         <div class="button new_button"><a href="#">Inscribite ahora></a>
+         </div>
+       </div>
+      </div>
+     </div>
     </div>
+   </div>
   </div>
+ </div>
 </template>
+
+<style>
+.mainN
+{
+  width: 100%;
+  height: 100%;
+  margin-top:150px;
+}
+</style>

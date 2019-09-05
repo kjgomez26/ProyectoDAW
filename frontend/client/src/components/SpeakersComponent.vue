@@ -1,10 +1,10 @@
 <template>
-  <div class="mainS">
+  <div>
     <section class="team-area pt-100 pb-100" id="team">
         <div class="container">
           <div class="row">
             <div class="col-xl-8 mx-auto text-center">
-              <div class="section-title">
+              <div class="section-title mainS">
                 <p class="parrafo">Contamos con un cuerpo docente especializado en sus instrumentos,
                   muchos de los cuales son miembros activos de Orquestas Nacionales e Internacionales.</p>
               </div>

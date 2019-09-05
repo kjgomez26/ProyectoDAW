@@ -5,9 +5,31 @@ nodeMailer = require('nodemailer');
 /*app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());*/
 
+<<<<<<< HEAD
 //thai fin
+=======
+const EventosController= require('../controllers/EventosController.js');
+
+>>>>>>> a79375952ca874a0415d5e85189e1af7a21e8626
 
 const router = app => {
+
+    //CRUD para el cliente
+    app.get('/eventos', EventosController.getEventos)
+
+
+    app.get('/eventos/:id', EventosController.getSingleEvento)
+
+    app.post('/add', EventosController.addEvento)
+
+
+    app.put('/update/:id', EventosController.updateEvento)
+
+    app.delete('/delete/:id', EventosController.deleteEvento)
+
+    
+
+
     // Display welcome message on the root
     app.get('/', (request, response) => {
         response.send({
@@ -156,6 +178,7 @@ const router = app => {
             response.send('Evento eliminado.');
         });
     });
+<<<<<<< HEAD
     /*TODO: Thai*/
     app.post('/send-email', function (req, res) {
         let transporter = nodeMailer.createTransport({
@@ -204,6 +227,70 @@ const router = app => {
 }); //post
 
      
+=======
+
+
+
+ /*   app.post('/add',function (req, res) {
+  let post = new Post(req.body);
+  post.save()
+    .then(() => {
+      res.status(200).json({'business': 'business in added successfully'});
+    })
+    .catch(() => {
+      res.status(400).send("unable to save to database");
+    });
+});
+
+// Defined get data(index or listing) route
+app.get('/',function (req, res) {
+    Post.find(function(err, posts){
+    if(err){
+      res.json(err);
+    }
+    else {
+      res.json(posts);
+    }
+  });
+});
+
+// Defined edit route
+app.get('/edit/:id',function (req, res) {
+  let id = req.params.id;
+  Post.findById(id, function (err, post){
+      if(err) {
+        res.json(err);
+      }
+      res.json(post);
+  });
+});
+
+//  Defined update route
+app.post('/update/:id',function (req, res) {
+    Post.findById(req.params.id, function(err, post) {
+    if (!post)
+      res.status(404).send("data is not found");
+    else {
+        post.title = req.body.title;
+        post.body = req.body.body;
+        post.save().then(() => {
+          res.json('Update complete');
+      })
+      .catch(() => {
+            res.status(400).send("unable to update the database");
+      });
+    }
+  });
+});
+
+// Defined delete | remove | destroy route
+app.delete('/delete/:id',function (req, res) {
+    Post.findByIdAndRemove({_id: req.params.id}, function(err){
+        if(err) res.json(err);
+        else res.json('Successfully removed');
+    });
+});*/
+>>>>>>> a79375952ca874a0415d5e85189e1af7a21e8626
 }
 
 module.exports = router;

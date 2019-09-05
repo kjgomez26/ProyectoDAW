@@ -1,8 +1,8 @@
 <template>
-  <div class="mainD">
+  <div>
     <div class="container">
                 <div class="row">
-                    <div class="col-xl-8 mx-auto">
+                    <div class="col-xl-8 mx-auto mainD">
                         <div class="speakers">
                             <div class="container reset_container" id="resultadosdevelopers">
                             </div>

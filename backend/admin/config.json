@@ -1,6 +1,6 @@
 {
     "mysql": {
-        "database": "dbDaw",
+        "database": "db_final",
         "user": "root",
         "password": "root"
     },

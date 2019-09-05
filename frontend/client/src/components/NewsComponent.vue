@@ -1,8 +1,8 @@
 <template>
- <div class="mainN">
+ <div>
   <div class="news">
    <div class="row">
-    <div class="col-lg-8">
+    <div class="col-lg-8 mainN">
      <div class="news_items">
       <div class="news_item">
        <div class="news_image_container">

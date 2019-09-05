@@ -1,9 +1,9 @@
 <template>
-  <div class="mainE">
+  <div>
     <div class="events">
       <div class="container">
         <div class="row">
-          <div class="col">
+          <div class="col mainE">
             <!-- Event -->
             <div class="event">
               <div class="row row-lg-eq-height">
@@ -245,7 +245,7 @@
 {
   width: 100%;
   height: 100%;
-  margin-top:200px;
+  margin-top:150px;
 }
 
 .h5E{

@@ -1,21 +1,21 @@
 <template>
   <div>
-    <h1>Editar calificacion</h1>
-    <form @submit.prevent="updatePost"  class="mainEdit">
-    <h1>Editar Evento</h1>
-      <div class="row">
+    <h1>Calificar</h1>
+    <form @submit.prevent="addPost">
+      <div class="row mainCr">
         <div class="col-md-6">
           <div class="form-group">
-            <label>Titulo del evento: </label>
-            <p>{{this.$route.params.titulo}}</p>
+            <label>Titulo de evento:</label>
+            <input type="text" class="form-control" v-model="post.titulo">
           </div>
         </div>
-      </div>
+        </div>
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
               <label>Descripcion de Evento:</label>
-              <input type="text" class="form-control" v-model="post.descripcionr"></div>
+              <input type="text" class="form-control" v-model="post.descripcion">
+            </div>
           </div>
         </div>
         <div class="row">
@@ -43,7 +43,7 @@
         </div>
         </div>
         <div class="form-group">
-          <button class="btn btn-primary">Actualizar</button>
+          <button class="btn btn-primary">Crear</button>
         </div>
     </form>
   </div>
@@ -51,39 +51,28 @@
 
 <script>
     export default {
-
-      data() {
+        data(){
         return {
-          post: {}
+          post:{
+          }
         }
-      },
-      created() {
-        let uri = `http://localhost:3000/eventos/${this.$route.params.id}`;
-        this.axios.get(uri).then((response) => {
-            this.post = response.data;
+    },
+    methods: {
+      addPost(){
+        let uri = 'http://localhost:3000/eventosConservatorio';
+        this.axios.post(uri, this.post).then(() => {
+          this.$router.push({name: 'admin'});
         });
-      },
-      methods: {
-        updatePost() {
-          let uri = `http://localhost:4000/posts/update/${this.$route.params.id}`;
-          this.axios.post(uri, this.post).then(() => {
-            this.$router.push({name: 'posts'});
-          });
-        }
       }
     }
+  }
 </script>
 
 <style>
-.mainEdit
-{
-  width: 100%;
-  height: 100%;
-  margin-top:200px;
-}
-
-.h5E{
-  margin-top:100px;
-  text-align: center;
-}
+  .mainCr
+  {
+    width: 100%;
+    height: 100%;
+    margin-top: 200px;
+  }
 </style>

@@ -24,6 +24,8 @@ import Contact from './components/ContactComponent.vue';
 import News from './components/NewsComponent.vue';
 import Login from './components/LoginComponent.vue';
 import Grafico1 from './components/Grafico1Component.vue';
+import Admin from './components/AdminComponent.vue';
+import CrearEvento from './components/CrearEvento.vue';
 
 const routes = [
   {
@@ -85,6 +87,16 @@ const routes = [
       path: '/grafico1',
       name: 'grafico1',
       component: Grafico1,
+    },
+    {
+      path: '/admin',
+      name: 'admin',
+      component: Admin,
+    },
+    {
+      path: '/crearEvento',
+      name: 'crearEvento',
+      component: CrearEvento,
     },
 
 ];

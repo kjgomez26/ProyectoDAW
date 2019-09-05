@@ -1,8 +1,16 @@
 // Load the MySQL pool connection
 const pool = require('../data/config');
+//thai inicio
+nodeMailer = require('nodemailer');
+/*app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());*/
 
+<<<<<<< HEAD
+//thai fin
+=======
 const EventosController= require('../controllers/EventosController.js');
 
+>>>>>>> a79375952ca874a0415d5e85189e1af7a21e8626
 
 const router = app => {
 
@@ -172,6 +180,56 @@ const router = app => {
             response.send('Evento eliminado.');
         });
     });
+<<<<<<< HEAD
+    /*TODO: Thai*/
+    app.post('/send-email', function (req, res) {
+        let transporter = nodeMailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: 'youemail@gmail.com',//process.env.EMAIL || 'abc@gmail.com', // TODO: your gmail account
+                pass: 'yourpass'//process.env.PASSWORD || '1234' // TODO: your gmail password
+            }
+        });
+        
+        // Step 2
+        let mailOptions = {
+            from: 'abc@gmail.com', // TODO: email sender
+            to: 'thaiilizina@gmail.com', // TODO: email receiver
+            subject: 'Nodemailer - Test',
+            text: 'Wooohooo it works!!'
+        };
+        
+        // Step 3
+        transporter.sendMail(mailOptions, (err, data) => {
+            if (err) {
+                return log('Error occurs');
+            }
+            return log('Email sent!!!');
+        })
+        /*let transporter = nodeMailer.createTransport({
+            host: 'smtp.gmail.com',
+            port: 465,
+            secure: true,
+            auth: {
+                type: 'OAuth2',
+                user:'thaiilizina@gmail.com',
+                clientId: '1050554924440-5t7gq43929a0trql3sgpapauo0n8pjnh.apps.googleusercontent.com',
+                clientSecret: 'BPFOYeqbLur9TfNBTsfKUaiQ',
+                refreshToken: '1/hWJs5E0cxTJTVVeTAxJABxiJKZEzO4KkegU8xfqnV7kYOUR_REFRESH_TOKEN'
+            },
+            
+            tls:{
+                rejectUnauthorized:false
+            }
+        });*/
+        
+       
+       
+ 
+}); //post
+
+     
+=======
 
 
 
@@ -234,6 +292,7 @@ app.delete('/delete/:id',function (req, res) {
         else res.json('Successfully removed');
     });
 });*/
+>>>>>>> a79375952ca874a0415d5e85189e1af7a21e8626
 }
 
 module.exports = router;

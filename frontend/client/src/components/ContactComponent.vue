@@ -5,11 +5,11 @@
       <div class="col-lg-6 mainC">
         <div class="contact_form_container">
           <div class="contact_form_title">Contáctanos</div>
-          <form action="#" class="contact_form" id="contact_form">
+          <form method="POST" action="/send-email" class="contact_form" id="contact_form">
               <label for="exampleFormControlSelect1">Nombre</label><!--TODO: ver for-->
-            <input type="text" class="contact_input" placeholder="John Doe" required="required">
+            <input type="text" class="contact_input" placeholder="John Doe" required="required" v-model="first_name">
             <label for="exampleFormControlSelect1">Email</label>
-            <input type="email" class="contact_input" placeholder="johndoe@mail.com" required="required">
+            <input type="email" class="contact_input" placeholder="johndoe@mail.com" required="required" v-model="email">
             <div class="form-group"> <!--th-->
                 <label for="exampleFormControlSelect1">Ciudad</label>
                 <select class="form-control" id="exampleFormControlSelect1">
@@ -21,9 +21,9 @@
                 </select>
                 </div>
                 <label for="exampleFormControlSelect1">Subject</label>
-            <input type="text" class="contact_input" placeholder="Asunto" required="required">
+            <input type="text" class="contact_input" placeholder="Asunto" required="required" v-model="asunto">
             <label for="exampleFormControlSelect1">Mensaje</label>
-            <textarea name="contact_textarea" id="contact_textarea" class="contact_textarea contact_input" placeholder="Comment..." required="required"></textarea>
+            <textarea name="contact_textarea" id="contact_textarea" class="contact_textarea contact_input" placeholder="Comment..." required="required" v-model="comentario"></textarea>
             <button class="button contact_button"><span>Send Message</span></button>
           </form>
         </div>
@@ -68,3 +68,36 @@
   margin-top:200px;
 }
 </style>
+<!--TODO: Thai email -->
+<script>
+import axios from 'axios'
+import router from '../../../../backend/src/routes/routes'
+export default {
+  data () {
+    return {
+      first_name: '',
+      email: '',
+      asunto:'',
+      comentario:''
+      //password: ''
+    }
+  },
+  methods: {
+    register () {
+      axios.post('/send-email',
+        {
+          first_name: this.first_name,
+          last_name: this.last_name,
+          email: this.email,
+          password: this.password
+        }
+      ).then((res) => {
+        router.push({ name: 'Login' })
+        console.log(res)
+      }).catch((err) => {
+        console.log(err)
+      })
+    }
+  }
+}
+</script>

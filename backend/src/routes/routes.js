@@ -111,6 +111,17 @@ const router = app => {
         });
     });
 
+     app.put('/profesores/:id', (request, response) => {
+        const id = request.params.id;
+
+        pool.query('UPDATE profesor SET ? WHERE idProfesor = ?', [request.body, id], (error, result) => {
+            if (error) throw error;
+
+            response.send('Profesor actualizado correctamente');
+        });
+    });
+
+
     app.delete('/profesores/:id', (request, response) => {
         const id = request.params.id;
 
@@ -142,6 +153,16 @@ const router = app => {
             response.status(201).send('Nuevo curso añadido con éxito.');
         });
     });
+
+     app.put('/cursos/:id', (request, response) => {
+        const id = request.params.id;
+
+        pool.query('UPDATE curso SET ? WHERE idCurso = ?', [request.body, id], (error, result) => {
+            if (error) throw error;
+
+            response.send('Curso actualizado correctamente');
+        });
+    });
     app.delete('/cursos/:id', (request, response) => {
         const id = request.params.id;
         pool.query('DELETE FROM curso WHERE idCurso = ?', id, (error, result) => {
@@ -170,6 +191,16 @@ const router = app => {
             if (error) throw error;
 
             response.status(201).send('Nuevo evento añadido con éxito.');
+        });
+    });
+    app.put('/eventosConservatorio/:id', (request, response) => {
+        console.log(request.body.descripcion)
+        const id = request.params.id;
+
+        pool.query('UPDATE evento SET ? WHERE idEvento = ?', [request.body, id], (error, result) => {
+            if (error) throw error;
+
+            response.send('Evento actualizado correctamente');
         });
     });
     app.delete('/eventosConservatorio/:id', (request, response) => {

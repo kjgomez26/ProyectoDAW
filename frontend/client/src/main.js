@@ -24,12 +24,9 @@ import Contact from './components/ContactComponent.vue';
 import News from './components/NewsComponent.vue';
 import Login from './components/LoginComponent.vue';
 import Grafico1 from './components/Grafico1Component.vue';
-<<<<<<< HEAD
 import usuario from './components/UsuarioComponent.vue';
-=======
 import Admin from './components/AdminComponent.vue';
 import CrearEvento from './components/CrearEvento.vue';
->>>>>>> c6daa0a31bb75a97e6e753e61d5697cce439132c
 
 const routes = [
   {
@@ -93,12 +90,11 @@ const routes = [
       component: Grafico1,
     },
     {
-<<<<<<< HEAD
       path: '/usuario',
       name: 'usuario',
       component: usuario,
-    }
-=======
+    },
+    {
       path: '/admin',
       name: 'admin',
       component: Admin,
@@ -108,7 +104,6 @@ const routes = [
       name: 'crearEvento',
       component: CrearEvento,
     },
->>>>>>> c6daa0a31bb75a97e6e753e61d5697cce439132c
 
 ];
 

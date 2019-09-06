@@ -12,7 +12,7 @@
 				<input class="field" name='password' type="password" id='field_password' required/>
 			</div>
 			<div class="form-group">
-				<router-link :to="{name: 'home', params: {user: this.post.user}}" class="btn btn-success">Ingresar</router-link>
+				<router-link :to="{name: 'usuario', params: {user: this.post.user}}" class="btn btn-success">Ingresar</router-link>
 			</div>
 		</form>
 	</div>

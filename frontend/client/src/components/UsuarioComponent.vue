@@ -5,7 +5,7 @@
     <div class="col-lg-8 mainN">
      <div class="news_items">
 
-        <h1 v-for="post in posts" :key="post.nombre">Bienvendio : {{post.nombre}}</h1>
+        <h1 v-for="post in posts" :key="post.nombre">Bienvenido : {{post.nombre}}</h1>
         <h2 v-for="post in posts" :key="post.correo"> Correo: {{post.correo}}</h2>
         <h2 v-for="post in posts" :key="post.usuario">Usuario: {{post.usuario}}</h2>
         <h2 v-for="post in posts" :key="post.ciudad">Ciudad: {{post.ciudad}}</h2>
@@ -26,8 +26,8 @@
       },
       created()
       { 
-        //let usuario='cinviram';
-        let uri = 'http://localhost:3000/suscriptores/cinviram';//+usuario;
+        let usuario=this.$route.params.user;
+        let uri = 'http://localhost:3000/suscriptores/'+usuario;
         this.axios.get(uri).then( response => {
           this.posts = response.data;
         })

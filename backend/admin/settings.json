@@ -655,6 +655,38 @@
                 "editview": {
                     "show": true
                 }
+            },
+            {
+                "name": "eventos_asistidos",
+                "verbose": "eventos_asistidos",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
+            },
+            {
+                "name": "cursos_realizados",
+                "verbose": "cursos_realizados",
+                "control": {
+                    "text": true
+                },
+                "type": "int(11)",
+                "allowNull": true,
+                "defaultValue": null,
+                "listview": {
+                    "show": true
+                },
+                "editview": {
+                    "show": true
+                }
             }
         ],
         "mainview": {

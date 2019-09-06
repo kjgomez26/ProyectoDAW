@@ -28,7 +28,7 @@
                   <td>{{post.fecha}}</td>
                   <td>{{  post.lugar  }}</td>
                   <td>{{  post.organizador }}</td>
-                  <td><router-link :to="{name: 'edit', params: { id: post.idEvento, titulo: post.titulo, descripcion: post.descripcion, lugar: post.lugar, fecha: post.fecha}}" class="btn btn-primary">Actualizar</router-link></td>
+                  <td><router-link :to="{name: 'edit', params: { id: post.idEvento, titulo: post.titulo, descripcion: post.descripcion, lugar: post.lugar, fecha: post.fecha, organizador: post.organizador}}" class="btn btn-primary">Actualizar</router-link></td>
                   <td><button class="btn btn-danger" @click.prevent="deleteEvento(post.idEvento)">Borrar</button></td>
                 </tr>
             </tbody>

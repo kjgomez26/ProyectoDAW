@@ -1,13 +1,13 @@
 <template>
   <div>
     <h1>Editar calificacion</h1>
-    <form @submit.prevent="updatePost"  class="mainEdit">
+    <form @submit.prevent="updatePost" class="mainEdit">
     <h1>Editar Evento</h1>
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
             <label>Titulo del evento: </label>
-            <p>{{this.$route.params.titulo}}</p>
+            <input type="text" class="form-control" v-model="post.titulo">
           </div>
         </div>
       </div>
@@ -15,7 +15,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label>Descripcion de Evento:</label>
-              <input type="text" class="form-control" v-model="post.descripcionr"></div>
+              <input type="text" class="form-control" v-model="post.descripcion"></div>
           </div>
         </div>
         <div class="row">
@@ -54,20 +54,15 @@
 
       data() {
         return {
-          post: {}
+          post:{}
         }
-      },
-      created() {
-        let uri = `http://localhost:3000/eventos/${this.$route.params.id}`;
-        this.axios.get(uri).then((response) => {
-            this.post = response.data;
-        });
       },
       methods: {
         updatePost() {
-          let uri = `http://localhost:4000/posts/update/${this.$route.params.id}`;
-          this.axios.post(uri, this.post).then(() => {
-            this.$router.push({name: 'posts'});
+        let id = this.$route.params.id;
+          let uri = 'http://localhost:3000/eventosConservatorio/'+id;
+          this.axios.put(uri, this.post).then(() => {
+            this.$router.push({name: 'admin'});
           });
         }
       }

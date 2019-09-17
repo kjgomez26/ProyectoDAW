@@ -8,12 +8,12 @@ app.use(bodyParser.json());*/
 //thai fin
 
 const EventosController= require('../controllers/EventosController.js');
-
+const RelationalController = require('../controllers/RelationalController.js');
 
 
 const router = app => {
 
-    //CRUD para el cliente
+    //CRUD para el cliente en NO relacional
     app.get('/eventos', EventosController.getEventos)
 
 
@@ -30,6 +30,20 @@ const router = app => {
 
     
 
+    // API REST para la relacional
+    //INICIO
+
+    //usuarios
+    app.get("/usuarios", RelationalController.getUsuarios)
+
+
+
+
+    //suscriptores
+    app.get('/suscriptores',RelationalController.getSuscriptores)
+
+    //FIND API REST para la relacional
+
 
     // Display welcome message on the root
     app.get('/', (request, response) => {
@@ -39,13 +53,15 @@ const router = app => {
     });
 
     //Primera Entidad-Usuario
-    app.get('/usuarios', (request, response) => {
+
+
+    /*app.get('/usuarios', (request, response) => {
         pool.query('SELECT * FROM usuario', (error, result) => {
             if (error) throw error;
 
             response.send(result);
         });
-    });
+    });*/
 
     app.get('/usuarios/:usuario', (request, response) => {
         const usuario = request.params.usuario;
@@ -214,13 +230,13 @@ const router = app => {
 
     //Suscriptor-Busqueda por usuario
     //Obtener todos
-    app.get('/suscriptores', (request, response) => {
+    /*app.get('/suscriptores', (request, response) => {
         pool.query('SELECT * FROM suscriptor', (error, result) => {
             if (error) throw error;
 
             response.send(result);
         });
-    });
+    });*/
     //Obtener info por nombre de user
     app.get('/suscriptores/:usuario', (request, response) => {
         const usuario = request.params.usuario;

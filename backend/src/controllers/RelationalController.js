@@ -2,6 +2,7 @@ const RelationalUsuarios = require('../models/usuarios')
 const RelationalSuscriptores = require('../models/suscriptores')
 const RelationalProfesores=require('../models/profesores')
 const RelationalCursos=require('../models/cursos')
+const RelationalEventosConservatorio=require('../models/eventosConservatorio')
 
 //USUARIOS
 	//Get all usuarios
@@ -48,5 +49,10 @@ exports.getProfesores = async (req, response) =>{
 	//GET all Cursos
 exports.getCursos = async (req, response) =>{
 	RelationalCursos.findAll()
+	.then( (result) => response.json(result))
+};
+//EventosConservatorio
+exports.getEventosConservatorio = async (req, response) =>{
+	RelationalEventosConservatorio.findAll()
 	.then( (result) => response.json(result))
 };

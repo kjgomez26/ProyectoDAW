@@ -49,7 +49,8 @@ const router = app => {
 
     //cursos
     app.get("/cursos",RelationalController.getCursos)
-
+    //EventosConservatorio
+    app.get('/eventosConservatorio',RelationalController.getEventosConservatorio)
 
     //FIND API REST para la relacional
 
@@ -197,13 +198,13 @@ const router = app => {
     });
 
     //Cuarta Entidad-Eventos
-    app.get('/eventosConservatorio', (request, response) => {
+    /*app.get('/eventosConservatorio', (request, response) => {
         pool.query('SELECT * FROM evento', (error, result) => {
             if (error) throw error;
 
             response.send(result);
         });
-    });
+    });*/
     app.get('/eventosConservatorio/:id', (request, response) => {
         const id = request.params.id;
         pool.query('SELECT * FROM evento WHERE idEvento = ?', id, (error, result) => {

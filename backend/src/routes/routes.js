@@ -261,8 +261,8 @@ const router = app => {
         let mailOptions = {
             from: 'abc@gmail.com', // TODO: email sender
             to: req.body.email, // TODO: email receiver
-            subject: 'Nodemailer - Test',
-            text: 'Wooohooo it works!!'
+            subject: req.body.asunto,
+            text: req.body.comentario
         };
         
         // Step 3

@@ -16,9 +16,9 @@ let Usuario = sequelize.define('usuario', {
       timestamps: false,
     }
 );
-Usuario.associate = (models) => {
+/*Usuario.associate = (models) => {
     Usuario.belongsTo(models.suscriptor);
-  };
+  };*/
 /*
 Usuario.sync().then(() => {
     console.log('New table created');

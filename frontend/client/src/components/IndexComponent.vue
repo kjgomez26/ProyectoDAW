@@ -1,6 +1,7 @@
 <template>
-  <div>
-      <h1>Eventos</h1>
+  <div >
+    <div id="HTMLtoPDF">
+      <h1>Calificaciones de eventos por usuario</h1>
         <div class="row mainIndex">
           <div class="col-md-10"><h1>Eventos</h1></div>
           <div class="col-md-2">
@@ -37,6 +38,8 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+      <button type="button" onclick="HTMLtoPDF()">Descargar PDF</button>
   </div>
 </template>
 

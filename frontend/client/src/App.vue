@@ -21,9 +21,17 @@
                   </a>  
                 </div>
                 <div class="header_social ml-auto">
-                        <a id='startButton' class="btn btn-success" href="javascript:void(0);" onclick="javascript:introJs().start();">
-                              Guia
-                            </a>
+                          <div class='container'>
+                            <div class='row'>
+                              <div class='column'>
+                                  <ul class="navbar-nav">
+                                      <li class="nav-item">
+                                        <router-link to="/loginAdmin" class="nav-link">Admin</router-link>
+                                      </li>
+                                    </ul>
+                              </div> 
+                            </div>
+                          </div>
                         <h5 v-for="user in users" :key="user.usuario" >{{user.usuario}}</h5>
                         <h5>{{this.$route.params.user}}</h5>
                         <ul data-step='8' data-intro='Visita nuestras redes sociales'> <!--LA redes sociales-->
@@ -118,3 +126,12 @@
 
   }
 </script>
+
+<style>
+    .fade-enter-active, .fade-leave-active {
+      transition: opacity .5s
+    }
+    .fade-enter, .fade-leave-active {
+      opacity: 0
+    }
+</style>

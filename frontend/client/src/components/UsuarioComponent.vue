@@ -3,15 +3,18 @@
   <div class="news">
    <div class="row">
     <div class="col-lg-8 mainN">
-     <div class="news_items">
+     <form class="news_items ">
 
         <h1 v-for="post in posts" :key="post.nombre">Bienvenido : {{post.nombre}}</h1>
         <h2 v-for="post in posts" :key="post.correo"> Correo: {{post.correo}}</h2>
         <h2 v-for="post in posts" :key="post.usuario">Usuario: {{post.usuario}}</h2>
         <h2 v-for="post in posts" :key="post.ciudad">Ciudad: {{post.ciudad}}</h2>
-        <button> Ver mis calificaciones</button>
+        <div class="form-group" v-for="post in posts" :key="post.nombre">
+          <router-link :to="{name: 'calificaciones', params: {user: post.usuario} }" class="btn btn-success">Ver mis calificaciones {{post.nombre}}</router-link>
+        </div>
+
      
-  </div>
+      </form>
  </div>
  </div>
  </div>

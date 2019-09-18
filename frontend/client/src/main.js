@@ -27,6 +27,8 @@ import Grafico1 from './components/Grafico1Component.vue';
 import usuario from './components/UsuarioComponent.vue';
 import Admin from './components/AdminComponent.vue';
 import CrearEvento from './components/CrearEvento.vue';
+import Calificaciones from './components/CalificacionesComponent.vue';
+import LoginAdmin from './components/LoginAdminComponent.vue';
 
 const routes = [
   {
@@ -103,6 +105,16 @@ const routes = [
       path: '/crearEvento',
       name: 'crearEvento',
       component: CrearEvento,
+    },
+    {
+      path: '/calificaciones',
+      name: 'calificaciones',
+      component: Calificaciones,
+    },
+    {
+      path: '/loginAdmin',
+      name: 'loginAdmin',
+      component: LoginAdmin,
     },
 
 ];

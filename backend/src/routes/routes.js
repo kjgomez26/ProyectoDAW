@@ -47,6 +47,10 @@ const router = app => {
     //profesores
     app.get("/profesores",RelationalController.getProfesores)
 
+    //cursos
+    app.get("/cursos",RelationalController.getCursos)
+
+
     //FIND API REST para la relacional
 
 
@@ -153,13 +157,13 @@ const router = app => {
     });
 
     //Tercera Entidad-Cursos
-    app.get('/cursos', (request, response) => {
+    /*app.get('/cursos', (request, response) => {
         pool.query('SELECT * FROM curso', (error, result) => {
             if (error) throw error;
 
             response.send(result);
         });
-    });
+    });*/
     app.get('/cursos/:id', (request, response) => {
         const id = request.params.id;
         pool.query('SELECT * FROM curso WHERE idCurso = ?', id, (error, result) => {

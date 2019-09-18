@@ -35,12 +35,17 @@ const router = app => {
 
     //usuarios
     app.get("/usuarios", RelationalController.getUsuarios)
+    app.get('/usuarios/:usuario',RelationalController.getUsuario)
+    app.post('/usuarios',RelationalController.postUsuario)
 
 
 
 
     //suscriptores
     app.get('/suscriptores',RelationalController.getSuscriptores)
+
+    //profesores
+    app.get("/profesores",RelationalController.getProfesores)
 
     //FIND API REST para la relacional
 
@@ -63,7 +68,7 @@ const router = app => {
         });
     });*/
 
-    app.get('/usuarios/:usuario', (request, response) => {
+    /*app.get('/usuarios/:usuario', (request, response) => {
         const usuario = request.params.usuario;
 
         pool.query('SELECT * FROM usuario WHERE usuario = ?', usuario, (error, result) => {
@@ -71,15 +76,15 @@ const router = app => {
 
             response.send(result);
         });
-    });
+    });*/
 
-    app.post('/usuarios', (request, response) => {
+    /*app.post('/usuarios', (request, response) => {
         pool.query('INSERT INTO usuario SET ?', request.body, (error, result) => {
             if (error) throw error;
 
             response.status(201).send('Usuario añadido');
         });
-    });
+    });*/
 
     app.put('/usuarios/:usuario', (request, response) => {
         const usuario = request.params.usuario;
@@ -101,13 +106,13 @@ const router = app => {
     });
 
     //Segunda Entidad-Profesor
-    app.get('/profesores', (request, response) => {
+    /*app.get('/profesores', (request, response) => {
         pool.query('SELECT * FROM profesor', (error, result) => {
             if (error) throw error;
 
             response.send(result);
         });
-    });
+    });*/
 
     app.get('/profesores/:id', (request, response) => {
         const id = request.params.id;

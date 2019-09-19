@@ -39,22 +39,27 @@ const router = app => {
     app.post('/usuarios',RelationalController.postUsuario)
     app.put('/usuarios/:usuario',RelationalController.putUsuario)
     app.delete('/usuarios/:usuario',RelationalController.deleteUsuario)
-
-
-
     //suscriptores
     app.get('/suscriptores',RelationalController.getSuscriptores)
     app.get('/suscriptores/:suscriptor',RelationalController.getSuscriptor)
     //profesores
     app.get("/profesores",RelationalController.getProfesores)
     app.get('/profesores/:profesor',RelationalController.getProfesor)
-
-    //cursosS
+    app.post('/profesores',RelationalController.postProfesor)
+    app.put('/profesores/:profesor',RelationalController.putProfesor)
+    app.delete('/profesores/:profesor',RelationalController.deleteUsuario)
+    //cursos
     app.get("/cursos",RelationalController.getCursos)
     app.get("/cursos/:curso",RelationalController.getCurso)
+    app.post('/cursos',RelationalController.postCurso)
+    app.put('/cursos/:curso',RelationalController.putCurso)
+    app.delete('/cursos/:curso',RelationalController.deleteCurso)
     //EventosConservatorio
     app.get('/eventosConservatorio',RelationalController.getEventosConservatorio)
     app.get('/eventosConservatorio/:evento',RelationalController.getEventoConservatorio)
+    app.post('/eventosConservatorio',RelationalController.postEventoConservatorio)
+    app.put('/eventosConservatorio/:evento',RelationalController.putEventoConservatorio)
+    app.delete('/eventosConservatorio/:evento',RelationalController.deleteEventoConservatorio)
     //FIND API REST para la relacional
 
 
@@ -132,15 +137,15 @@ const router = app => {
         });
     });*/
 
-    app.post('/profesores', (request, response) => {
+    /*app.post('/profesores', (request, response) => {
         pool.query('INSERT INTO profesor SET ?', request.body, (error, result) => {
             if (error) throw error;
 
             response.status(201).send('Profesor añadido con éxito.');
         });
-    });
+    });]]*/
 
-     app.put('/profesores/:id', (request, response) => {
+     /*app.put('/profesores/:id', (request, response) => {
         const id = request.params.id;
 
         pool.query('UPDATE profesor SET ? WHERE idProfesor = ?', [request.body, id], (error, result) => {
@@ -148,17 +153,17 @@ const router = app => {
 
             response.send('Profesor actualizado correctamente');
         });
-    });
+    });*/
 
 
-    app.delete('/profesores/:id', (request, response) => {
+   /* app.delete('/profesores/:id', (request, response) => {
         const id = request.params.id;
 
         pool.query('DELETE FROM profesor WHERE idProfesor = ?', id, (error, result) => {
             if (error) throw error;
             response.send('Profesor eliminado.');
         });
-    });
+    });*/
 
     //Tercera Entidad-Cursos
     /*app.get('/cursos', (request, response) => {
@@ -175,15 +180,15 @@ const router = app => {
             response.send(result);
         });
     });*/
-    app.post('/cursos', (request, response) => {
+   /* app.post('/cursos', (request, response) => {
         pool.query('INSERT INTO curso SET ?', request.body, (error, result) => {
             if (error) throw error;
 
             response.status(201).send('Nuevo curso añadido con éxito.');
         });
-    });
+    });*/
 
-     app.put('/cursos/:id', (request, response) => {
+    /* app.put('/cursos/:id', (request, response) => {
         const id = request.params.id;
 
         pool.query('UPDATE curso SET ? WHERE idCurso = ?', [request.body, id], (error, result) => {
@@ -191,14 +196,14 @@ const router = app => {
 
             response.send('Curso actualizado correctamente');
         });
-    });
-    app.delete('/cursos/:id', (request, response) => {
+    });*/
+   /* app.delete('/cursos/:id', (request, response) => {
         const id = request.params.id;
         pool.query('DELETE FROM curso WHERE idCurso = ?', id, (error, result) => {
             if (error) throw error;
             response.send('Curso eliminado.');
         });
-    });
+    });*/
 
     //Cuarta Entidad-Eventos
     /*app.get('/eventosConservatorio', (request, response) => {
@@ -215,14 +220,14 @@ const router = app => {
             response.send(result);
         });
     });*/
-    app.post('/eventosConservatorio', (request, response) => {
+    /*app.post('/eventosConservatorio', (request, response) => {
         pool.query('INSERT INTO evento SET ?', request.body, (error, result) => {
             if (error) throw error;
 
             response.status(201).send('Nuevo evento añadido con éxito.');
         });
-    });
-    app.put('/eventosConservatorio/:id', (request, response) => {
+    });*/
+   /* app.put('/eventosConservatorio/:id', (request, response) => {
         console.log(request.body.descripcion)
         const id = request.params.id;
 
@@ -231,14 +236,14 @@ const router = app => {
 
             response.send('Evento actualizado correctamente');
         });
-    });
-    app.delete('/eventosConservatorio/:id', (request, response) => {
+    });*/
+   /* app.delete('/eventosConservatorio/:id', (request, response) => {
         const id = request.params.id;
         pool.query('DELETE FROM evento WHERE idEvento = ?', id, (error, result) => {
             if (error) throw error;
             response.send('Evento eliminado.');
         });
-    });
+    });*/
 
 
     //Suscriptor-Busqueda por usuario

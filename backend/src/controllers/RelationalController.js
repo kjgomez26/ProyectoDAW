@@ -52,7 +52,19 @@ exports.putUsuario=async(req,response)=>{
 
 	
 };
-
+//delete usuario
+exports.deleteUsuario=async(req,response)=>{
+	console.log(req.body.cursos_realizados)
+	  RelationalUsuarios.destroy({
+	  	 where:{
+        usuario: req.params.usuario,
+    }
+      }).then( (result) => response.json(result) )
+	  .catch(function(err) {
+      // print the error details
+      console.log(err);
+	  });	
+};
 
 //SUSCRIPTORES
 	//Get all Suscriptores
@@ -92,4 +104,9 @@ exports.getCurso = async (req, response) => {
 exports.getEventosConservatorio = async (req, response) =>{
 	RelationalEventosConservatorio.findAll()
 	.then( (result) => response.json(result))
+};
+//un evento
+exports.getEventoConservatorio = async (req, response) => {
+	RelationalEventosConservatorio.findByPk(req.params.evento)
+	.then( (result) => response.json(result) )
 };

@@ -38,24 +38,23 @@ const router = app => {
     app.get('/usuarios/:usuario',RelationalController.getUsuario)
     app.post('/usuarios',RelationalController.postUsuario)
     app.put('/usuarios/:usuario',RelationalController.putUsuario)
-
+    app.delete('/usuarios/:usuario',RelationalController.deleteUsuario)
 
 
 
     //suscriptores
     app.get('/suscriptores',RelationalController.getSuscriptores)
-    
     app.get('/suscriptores/:suscriptor',RelationalController.getSuscriptor)
     //profesores
     app.get("/profesores",RelationalController.getProfesores)
     app.get('/profesores/:profesor',RelationalController.getProfesor)
 
-    //cursos
+    //cursosS
     app.get("/cursos",RelationalController.getCursos)
     app.get("/cursos/:curso",RelationalController.getCurso)
     //EventosConservatorio
     app.get('/eventosConservatorio',RelationalController.getEventosConservatorio)
-
+    app.get('/eventosConservatorio/:evento',RelationalController.getEventoConservatorio)
     //FIND API REST para la relacional
 
 
@@ -105,14 +104,14 @@ const router = app => {
         });
     });*/
 
-    app.delete('/usuarios/:usuario', (request, response) => {
+   /* app.delete('/usuarios/:usuario', (request, response) => {
         const usuario = request.params.usuario;
 
         pool.query('DELETE FROM usuario WHERE usuario = ?', usuario, (error, result) => {
             if (error) throw error;
             response.send('Usuario eliminado.');
         });
-    });
+    });*/
 
     //Segunda Entidad-Profesor
     /*app.get('/profesores', (request, response) => {
@@ -209,13 +208,13 @@ const router = app => {
             response.send(result);
         });
     });*/
-    app.get('/eventosConservatorio/:id', (request, response) => {
+/*app.get('/eventosConservatorio/:id', (request, response) => {
         const id = request.params.id;
         pool.query('SELECT * FROM evento WHERE idEvento = ?', id, (error, result) => {
             if (error) throw error;
             response.send(result);
         });
-    });
+    });*/
     app.post('/eventosConservatorio', (request, response) => {
         pool.query('INSERT INTO evento SET ?', request.body, (error, result) => {
             if (error) throw error;

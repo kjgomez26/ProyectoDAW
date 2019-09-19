@@ -37,18 +37,22 @@ const router = app => {
     app.get("/usuarios", RelationalController.getUsuarios)
     app.get('/usuarios/:usuario',RelationalController.getUsuario)
     app.post('/usuarios',RelationalController.postUsuario)
+    app.put('/usuarios/:usuario',RelationalController.putUsuario)
 
 
 
 
     //suscriptores
     app.get('/suscriptores',RelationalController.getSuscriptores)
-
+    
+    app.get('/suscriptores/:suscriptor',RelationalController.getSuscriptor)
     //profesores
     app.get("/profesores",RelationalController.getProfesores)
+    app.get('/profesores/:profesor',RelationalController.getProfesor)
 
     //cursos
     app.get("/cursos",RelationalController.getCursos)
+    app.get("/cursos/:curso",RelationalController.getCurso)
     //EventosConservatorio
     app.get('/eventosConservatorio',RelationalController.getEventosConservatorio)
 
@@ -91,7 +95,7 @@ const router = app => {
         });
     });*/
 
-    app.put('/usuarios/:usuario', (request, response) => {
+    /*app.put('/usuarios/:usuario', (request, response) => {
         const usuario = request.params.usuario;
 
         pool.query('UPDATE usuario SET ? WHERE usuario = ?', [request.body, usuario], (error, result) => {
@@ -99,7 +103,7 @@ const router = app => {
 
             response.send('Usuario actualizado correctamente');
         });
-    });
+    });*/
 
     app.delete('/usuarios/:usuario', (request, response) => {
         const usuario = request.params.usuario;
@@ -119,7 +123,7 @@ const router = app => {
         });
     });*/
 
-    app.get('/profesores/:id', (request, response) => {
+    /*app.get('/profesores/:id', (request, response) => {
         const id = request.params.id;
 
         pool.query('SELECT * FROM profesor WHERE idProfesor = ?', id, (error, result) => {
@@ -127,7 +131,7 @@ const router = app => {
 
             response.send(result);
         });
-    });
+    });*/
 
     app.post('/profesores', (request, response) => {
         pool.query('INSERT INTO profesor SET ?', request.body, (error, result) => {
@@ -165,13 +169,13 @@ const router = app => {
             response.send(result);
         });
     });*/
-    app.get('/cursos/:id', (request, response) => {
+    /*app.get('/cursos/:id', (request, response) => {
         const id = request.params.id;
         pool.query('SELECT * FROM curso WHERE idCurso = ?', id, (error, result) => {
             if (error) throw error;
             response.send(result);
         });
-    });
+    });*/
     app.post('/cursos', (request, response) => {
         pool.query('INSERT INTO curso SET ?', request.body, (error, result) => {
             if (error) throw error;
@@ -248,13 +252,13 @@ const router = app => {
         });
     });*/
     //Obtener info por nombre de user
-    app.get('/suscriptores/:usuario', (request, response) => {
+    /*app.get('/suscriptores/:usuario', (request, response) => {
         const usuario = request.params.usuario;
         pool.query('SELECT * FROM suscriptor WHERE usuario = ?', usuario, (error, result) => {
             if (error) throw error;
             response.send(result);
         });
-    });
+    });*/
 
     /*TODO: Thai*/
     app.post('/send-email', function (req, res) {

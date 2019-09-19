@@ -29,8 +29,14 @@ import Admin from './components/AdminComponent.vue';
 import CrearEvento from './components/CrearEvento.vue';
 import Calificaciones from './components/CalificacionesComponent.vue';
 import LoginAdmin from './components/LoginAdminComponent.vue';
+import Chat from "./components/ChatComponent.vue";
 
 const routes = [
+  {
+    name: 'chat',
+    path: '/chat',
+    component: Chat
+  },
   {
     name: 'login',
     path: '/login',

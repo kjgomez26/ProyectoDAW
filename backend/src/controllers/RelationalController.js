@@ -41,7 +41,7 @@ exports.putUsuario=async(req,response)=>{
     },
     {
   	where:{
-  	    usuario: req.body.usuario,
+  	    usuario: req.params.usuario,
   	
     }
       }).then( (result) => response.json(result) )
